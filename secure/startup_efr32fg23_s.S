@@ -206,9 +206,7 @@ Reset_Handler:
                 #endif
                 #endif // SL_TRUSTZONE_SECURE
 
-                #ifndef __NO_SYSTEM_INIT
                 bl       SystemInit
-                #endif
 
                 ldr      r4, =__copy_table_start__
                 ldr      r5, =__copy_table_end__

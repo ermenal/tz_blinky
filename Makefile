@@ -29,7 +29,7 @@ NON_SECURE_OBJS       += $(patsubst non_secure/%.S, $(BUILD_DIR)/non_secure/%.o,
 # Common flags for both worlds
 CPU_FLAGS       := -mcpu=cortex-m33 -mthumb
 COMMON_CFLAGS   := $(CPU_FLAGS) -g3 -Wall -O0 -ffunction-sections -fdata-sections -fno-exceptions 
-COMMON_LDFLAGS  := $(CPU_FLAGS) -Wl,--gc-sections,--no-warn-rwx-segments -nostdlib --specs=nano.specs
+COMMON_LDFLAGS  := $(CPU_FLAGS) -Wl,--gc-sections,--no-warn-rwx-segments -nostdlib --specs=nano.specs 
 
 # Secure World Flags
 CFLAGS_S        := $(COMMON_CFLAGS) -mcmse -Icommon -Isecure
@@ -66,7 +66,7 @@ all: $(FINAL_HEX)
 # Link the secure ELF and, crucially, generate the secure import library
 $(SECURE_ELF): $(SECURE_OBJS)
 	@echo "Linking Secure ELF: $@"
-	$(CC) $(LDFLAGS_S) $^ -o $@ -Wl,--out-implib=$(SECURE_LIB)
+	$(CC) $(LDFLAGS_S) $^ -o $@ -Wl,--out-implib=$(SECURE_LIB) -lgcc
 
 # Compile secure C files
 $(BUILD_DIR)/secure/%.o: secure/%.c

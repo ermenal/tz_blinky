@@ -1,0 +1,929 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+                              build/secure/main_s.o (__gnu_cmse_nonsecure_call)
+
+Discarded input sections
+
+ .group         0x00000000        0xc build/secure/aeabi_dummy.o
+ .text          0x00000000        0x0 build/secure/aeabi_dummy.o
+ .data          0x00000000        0x0 build/secure/aeabi_dummy.o
+ .bss           0x00000000        0x0 build/secure/aeabi_dummy.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/main_s.o
+ .text          0x00000000        0x0 build/secure/main_s.o
+ .data          0x00000000        0x0 build/secure/main_s.o
+ .bss           0x00000000        0x0 build/secure/main_s.o
+ .debug_macro   0x00000000      0xac0 build/secure/main_s.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_api.o
+ .text          0x00000000        0x0 build/secure/secure_api.o
+ .data          0x00000000        0x0 build/secure/secure_api.o
+ .bss           0x00000000        0x0 build/secure/secure_api.o
+ .debug_macro   0x00000000      0xac0 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x93a build/secure/secure_api.o
+ .debug_macro   0x00000000       0x22 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x8e build/secure/secure_api.o
+ .debug_macro   0x00000000       0x51 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x103 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x6a build/secure/secure_api.o
+ .debug_macro   0x00000000      0x1df build/secure/secure_api.o
+ .debug_macro   0x00000000       0x1c build/secure/secure_api.o
+ .debug_macro   0x00000000       0x2a build/secure/secure_api.o
+ .debug_macro   0x00000000      0x110 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x17ea build/secure/secure_api.o
+ .debug_macro   0x00000000       0x5e build/secure/secure_api.o
+ .debug_macro   0x00000000       0x16 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x58 build/secure/secure_api.o
+ .debug_macro   0x00000000      0xeaa build/secure/secure_api.o
+ .debug_macro   0x00000000     0x15cd build/secure/secure_api.o
+ .debug_macro   0x00000000      0x323 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x34 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x327 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x456 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x240 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x156 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x7f7 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x363 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x1820 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x10 build/secure/secure_api.o
+ .debug_macro   0x00000000      0xb8f build/secure/secure_api.o
+ .debug_macro   0x00000000     0x3b1b build/secure/secure_api.o
+ .debug_macro   0x00000000      0xcb2 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x70 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x15db build/secure/secure_api.o
+ .debug_macro   0x00000000     0x210a build/secure/secure_api.o
+ .debug_macro   0x00000000      0x53b build/secure/secure_api.o
+ .debug_macro   0x00000000      0xfe5 build/secure/secure_api.o
+ .debug_macro   0x00000000      0xc49 build/secure/secure_api.o
+ .debug_macro   0x00000000       0x34 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x308 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x80c build/secure/secure_api.o
+ .debug_macro   0x00000000      0x143 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x1b22 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x676 build/secure/secure_api.o
+ .debug_macro   0x00000000      0xb85 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x74f build/secure/secure_api.o
+ .debug_macro   0x00000000      0x33d build/secure/secure_api.o
+ .debug_macro   0x00000000       0xe2 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x338 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x91e build/secure/secure_api.o
+ .debug_macro   0x00000000     0x1fc1 build/secure/secure_api.o
+ .debug_macro   0x00000000      0x9e1 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x158e build/secure/secure_api.o
+ .debug_macro   0x00000000      0xe7d build/secure/secure_api.o
+ .debug_macro   0x00000000     0x105c build/secure/secure_api.o
+ .debug_macro   0x00000000      0x8e1 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x1af8 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x113c build/secure/secure_api.o
+ .debug_macro   0x00000000      0x6ea build/secure/secure_api.o
+ .debug_macro   0x00000000      0x6c1 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x1641 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x18dc build/secure/secure_api.o
+ .debug_macro   0x00000000      0x316 build/secure/secure_api.o
+ .debug_macro   0x00000000     0x1199 build/secure/secure_api.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/secure_led.o
+ .text          0x00000000        0x0 build/secure/secure_led.o
+ .data          0x00000000        0x0 build/secure/secure_led.o
+ .bss           0x00000000        0x0 build/secure/secure_led.o
+ .debug_macro   0x00000000      0xac0 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x93a build/secure/secure_led.o
+ .debug_macro   0x00000000       0x22 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x8e build/secure/secure_led.o
+ .debug_macro   0x00000000       0x51 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x103 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x6a build/secure/secure_led.o
+ .debug_macro   0x00000000      0x1df build/secure/secure_led.o
+ .debug_macro   0x00000000       0x1c build/secure/secure_led.o
+ .debug_macro   0x00000000       0x2a build/secure/secure_led.o
+ .debug_macro   0x00000000      0x110 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x17ea build/secure/secure_led.o
+ .debug_macro   0x00000000       0x5e build/secure/secure_led.o
+ .debug_macro   0x00000000       0x16 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x58 build/secure/secure_led.o
+ .debug_macro   0x00000000      0xeaa build/secure/secure_led.o
+ .debug_macro   0x00000000     0x15cd build/secure/secure_led.o
+ .debug_macro   0x00000000      0x323 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x34 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x327 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x456 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x240 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x156 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x7f7 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x363 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x1820 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x10 build/secure/secure_led.o
+ .debug_macro   0x00000000      0xb8f build/secure/secure_led.o
+ .debug_macro   0x00000000     0x3b1b build/secure/secure_led.o
+ .debug_macro   0x00000000      0xcb2 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x70 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x15db build/secure/secure_led.o
+ .debug_macro   0x00000000     0x210a build/secure/secure_led.o
+ .debug_macro   0x00000000      0x53b build/secure/secure_led.o
+ .debug_macro   0x00000000      0xfe5 build/secure/secure_led.o
+ .debug_macro   0x00000000      0xc49 build/secure/secure_led.o
+ .debug_macro   0x00000000       0x34 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x308 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x80c build/secure/secure_led.o
+ .debug_macro   0x00000000      0x143 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x1b22 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x676 build/secure/secure_led.o
+ .debug_macro   0x00000000      0xb85 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x74f build/secure/secure_led.o
+ .debug_macro   0x00000000      0x33d build/secure/secure_led.o
+ .debug_macro   0x00000000       0xe2 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x338 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x91e build/secure/secure_led.o
+ .debug_macro   0x00000000     0x1fc1 build/secure/secure_led.o
+ .debug_macro   0x00000000      0x9e1 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x158e build/secure/secure_led.o
+ .debug_macro   0x00000000      0xe7d build/secure/secure_led.o
+ .debug_macro   0x00000000     0x105c build/secure/secure_led.o
+ .debug_macro   0x00000000      0x8e1 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x1af8 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x113c build/secure/secure_led.o
+ .debug_macro   0x00000000      0x6ea build/secure/secure_led.o
+ .debug_macro   0x00000000      0x6c1 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x1641 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x18dc build/secure/secure_led.o
+ .debug_macro   0x00000000      0x316 build/secure/secure_led.o
+ .debug_macro   0x00000000     0x1199 build/secure/secure_led.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .group         0x00000000        0xc build/secure/system_efr32fg23_s.o
+ .text          0x00000000        0x0 build/secure/system_efr32fg23_s.o
+ .data          0x00000000        0x0 build/secure/system_efr32fg23_s.o
+ .bss           0x00000000        0x0 build/secure/system_efr32fg23_s.o
+ .data.SystemHFXOClock
+                0x00000000        0x4 build/secure/system_efr32fg23_s.o
+ .data.SystemLFXOClock
+                0x00000000        0x4 build/secure/system_efr32fg23_s.o
+ .data.SystemHFRCODPLLClock
+                0x00000000        0x4 build/secure/system_efr32fg23_s.o
+ .data.SystemCoreClock
+                0x00000000        0x4 build/secure/system_efr32fg23_s.o
+ .text.FlashToRamCopy
+                0x00000000       0x38 build/secure/system_efr32fg23_s.o
+ .text.SystemHFRCODPLLClockGet
+                0x00000000       0x14 build/secure/system_efr32fg23_s.o
+ .text.SystemHFRCODPLLClockSet
+                0x00000000       0x1c build/secure/system_efr32fg23_s.o
+ .text.SystemSYSCLKGet
+                0x00000000       0x54 build/secure/system_efr32fg23_s.o
+ .text.SystemHCLKGet
+                0x00000000       0x3c build/secure/system_efr32fg23_s.o
+ .text.SystemMaxCoreClockGet
+                0x00000000       0x14 build/secure/system_efr32fg23_s.o
+ .text.SystemHFXOClockGet
+                0x00000000       0x14 build/secure/system_efr32fg23_s.o
+ .text.SystemHFXOClockSet
+                0x00000000       0x30 build/secure/system_efr32fg23_s.o
+ .text.SystemCLKIN0Get
+                0x00000000        0xe build/secure/system_efr32fg23_s.o
+ .text.SystemFSRCOClockGet
+                0x00000000       0x14 build/secure/system_efr32fg23_s.o
+ .text.SystemHFRCOEM23ClockGet
+                0x00000000       0xe8 build/secure/system_efr32fg23_s.o
+ .text.SystemLFRCOClockGet
+                0x00000000       0x10 build/secure/system_efr32fg23_s.o
+ .text.SystemULFRCOClockGet
+                0x00000000       0x10 build/secure/system_efr32fg23_s.o
+ .text.SystemLFXOClockGet
+                0x00000000       0x14 build/secure/system_efr32fg23_s.o
+ .text.SystemLFXOClockSet
+                0x00000000       0x1c build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xac0 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x22 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x8e build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x51 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x103 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x6a build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x1df build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x93a build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x1c build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x2a build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x110 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x17ea build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x5e build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x16 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x58 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xeaa build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x15cd build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x323 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x34 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x327 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x456 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x240 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x156 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x7f7 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x363 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x1820 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x10 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xb8f build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x3b1b build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xcb2 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x70 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x15db build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x210a build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x53b build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xfe5 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xc49 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0x34 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x308 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x80c build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x143 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x1b22 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x676 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xb85 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x74f build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x33d build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000       0xe2 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x338 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x91e build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x1fc1 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x9e1 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x158e build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0xe7d build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x105c build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x8e1 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x1af8 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x113c build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x6ea build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x6c1 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x1641 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x18dc build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000      0x316 build/secure/system_efr32fg23_s.o
+ .debug_macro   0x00000000     0x1199 build/secure/system_efr32fg23_s.o
+ .data          0x00000000        0x0 build/secure/startup_efr32fg23_s.o
+ .bss           0x00000000        0x0 build/secure/startup_efr32fg23_s.o
+ .ARM.extab     0x00000000        0x0 build/secure/startup_efr32fg23_s.o
+ .data          0x00000000        0x0 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+ .bss           0x00000000        0x0 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH_S          0x08000000         0x0001f800         xr
+FLASH_NSC        0x0801f800         0x00000800         xr
+RAM_S            0x20000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/secure/aeabi_dummy.o
+LOAD build/secure/main_s.o
+LOAD build/secure/secure_api.o
+LOAD build/secure/secure_led.o
+LOAD build/secure/system_efr32fg23_s.o
+LOAD build/secure/startup_efr32fg23_s.o
+LOAD /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a
+
+.text           0x08000000      0x96c
+ *(.vectors)
+ .vectors       0x08000000      0x7c0 build/secure/startup_efr32fg23_s.o
+                0x08000000                __Vectors
+                0x080007c0                __Vectors_End
+ *(.text*)
+ .text.__aeabi_unwind_cpp_pr0
+                0x080007c0        0x8 build/secure/aeabi_dummy.o
+                0x080007c0                __aeabi_unwind_cpp_pr0
+ .text.main     0x080007c8       0x4c build/secure/main_s.o
+                0x080007c8                main
+ .text.Secure_ToggleLED
+                0x08000814       0x2c build/secure/secure_api.o
+                0x08000814                __acle_se_Secure_ToggleLED
+ .text.Secure_LED_Init
+                0x08000840       0x38 build/secure/secure_led.o
+                0x08000840                Secure_LED_Init
+ .text.SystemInit
+                0x08000878       0x64 build/secure/system_efr32fg23_s.o
+                0x08000878                SystemInit
+ .text          0x080008dc       0x58 build/secure/startup_efr32fg23_s.o
+                0x080008dc                Reset_Handler
+                0x0800091e                HardFault_Handler
+                0x08000920                ULFRCO_IRQHandler
+                0x08000920                SW2_IRQHandler
+                0x08000920                TIMER2_IRQHandler
+                0x08000920                DebugMon_Handler
+                0x08000920                USART0_TX_IRQHandler
+                0x08000920                IADC_IRQHandler
+                0x08000920                EUSART0_TX_IRQHandler
+                0x08000920                I2C0_IRQHandler
+                0x08000920                LFXO_IRQHandler
+                0x08000920                VDAC_IRQHandler
+                0x08000920                SMU_SECURE_IRQHandler
+                0x08000920                SysTick_Handler
+                0x08000920                SYSRTC_SEQ_IRQHandler
+                0x08000920                EMUEFP_IRQHandler
+                0x08000920                EUSART2_TX_IRQHandler
+                0x08000920                PendSV_Handler
+                0x08000920                NMI_Handler
+                0x08000920                SYNTH_IRQHandler
+                0x08000920                HOSTMAILBOX_IRQHandler
+                0x08000920                HFXO0_IRQHandler
+                0x08000920                I2C1_IRQHandler
+                0x08000920                WDOG0_IRQHandler
+                0x08000920                TIMER3_IRQHandler
+                0x08000920                SYSCFG_IRQHandler
+                0x08000920                RFECA1_IRQHandler
+                0x08000920                EMUDG_IRQHandler
+                0x08000920                MSC_IRQHandler
+                0x08000920                DPLL0_IRQHandler
+                0x08000920                UsageFault_Handler
+                0x08000920                WDOG1_IRQHandler
+                0x08000920                M33CTI1_IRQHandler
+                0x08000920                TIMER4_IRQHandler
+                0x08000920                GPIO_EVEN_IRQHandler
+                0x08000920                LDMA_IRQHandler
+                0x08000920                SEMBTX_IRQHandler
+                0x08000920                SW0_IRQHandler
+                0x08000920                TIMER0_IRQHandler
+                0x08000920                LCD_IRQHandler
+                0x08000920                LETIMER0_IRQHandler
+                0x08000920                EUSART1_RX_IRQHandler
+                0x08000920                TIMER1_IRQHandler
+                0x08000920                HFRCO0_IRQHandler
+                0x08000920                SecureFault_Handler
+                0x08000920                BUFC_IRQHandler
+                0x08000920                DCDC_IRQHandler
+                0x08000920                MODEM_IRQHandler
+                0x08000920                Default_Handler
+                0x08000920                RAC_SEQ_IRQHandler
+                0x08000920                FRC_PRI_IRQHandler
+                0x08000920                SW3_IRQHandler
+                0x08000920                EMU_IRQHandler
+                0x08000920                KERNEL0_IRQHandler
+                0x08000920                FRC_IRQHandler
+                0x08000920                PCNT0_IRQHandler
+                0x08000920                KERNEL1_IRQHandler
+                0x08000920                AGC_IRQHandler
+                0x08000920                EUSART1_TX_IRQHandler
+                0x08000920                KEYSCAN_IRQHandler
+                0x08000920                HFRCOEM23_IRQHandler
+                0x08000920                sl_app_properties
+                0x08000920                BURTC_IRQHandler
+                0x08000920                SEMBRX_IRQHandler
+                0x08000920                RFECA0_IRQHandler
+                0x08000920                LFRCO_IRQHandler
+                0x08000920                ACMP0_IRQHandler
+                0x08000920                USART0_RX_IRQHandler
+                0x08000920                MemManage_Handler
+                0x08000920                SVC_Handler
+                0x08000920                EUSART2_RX_IRQHandler
+                0x08000920                SMU_S_PRIVILEGED_IRQHandler
+                0x08000920                SW1_IRQHandler
+                0x08000920                CMU_IRQHandler
+                0x08000920                EUSART0_RX_IRQHandler
+                0x08000920                RAC_RSM_IRQHandler
+                0x08000920                SETAMPERHOST_IRQHandler
+                0x08000920                LESENSE_IRQHandler
+                0x08000920                GPIO_ODD_IRQHandler
+                0x08000920                AES_IRQHandler
+                0x08000920                M33CTI0_IRQHandler
+                0x08000920                ICACHE0_IRQHandler
+                0x08000920                SMU_NS_PRIVILEGED_IRQHandler
+                0x08000920                FPUEXH_IRQHandler
+                0x08000920                PROTIMER_IRQHandler
+                0x08000920                ACMP1_IRQHandler
+                0x08000920                BusFault_Handler
+                0x08000920                MPAHBRAM_IRQHandler
+                0x08000920                SYSRTC_APP_IRQHandler
+ .text          0x08000934       0x38 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+                0x08000934                __gnu_cmse_nonsecure_call
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ *(.eh_frame*)
+
+.glue_7         0x0800096c        0x0
+ .glue_7        0x0800096c        0x0 linker stubs
+
+.glue_7t        0x0800096c        0x0
+ .glue_7t       0x0800096c        0x0 linker stubs
+
+.vfp11_veneer   0x0800096c        0x0
+ .vfp11_veneer  0x0800096c        0x0 linker stubs
+
+.v4_bx          0x0800096c        0x0
+ .v4_bx         0x0800096c        0x0 linker stubs
+
+.iplt           0x0800096c        0x0
+ .iplt          0x0800096c        0x0 build/secure/main_s.o
+
+.gnu.sgstubs    0x0801f800       0x20
+                0x0801f800                        . = ALIGN (0x20)
+                0x0801f800                        linker_sg_begin = .
+ *(.gnu.sgstubs*)
+                0x0801f800                        . = ALIGN (0x20)
+ .gnu.sgstubs.__stub
+                0x0801f800        0x8 linker stubs
+                0x0801f800                Secure_ToggleLED
+                0x0801f820                        linker_sg_end = (linker_sg_begin + SIZEOF (.gnu.sgstubs))
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0801f820                        __exidx_start = .
+
+.ARM.exidx      0x0800096c       0x10
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0800096c       0x10 build/secure/startup_efr32fg23_s.o
+                                 0x18 (size before relaxing)
+                0x0800097c                        __exidx_end = .
+
+.rel.dyn        0x0800097c        0x0
+ .rel.iplt      0x0800097c        0x0 build/secure/main_s.o
+
+.copy.table     0x0800097c        0xc
+                0x0800097c                        . = ALIGN (0x4)
+                0x0800097c                        __copy_table_start__ = .
+                0x0800097c        0x4 LONG 0x8000988 __etext
+                0x08000980        0x4 LONG 0x20000000 __data_start__
+                0x08000984        0x4 LONG 0x0 ((__data_end__ - __data_start__) / 0x4)
+                0x08000988                        __copy_table_end__ = .
+
+.zero.table     0x08000988        0x0
+                0x08000988                        . = ALIGN (0x4)
+                0x08000988                        __zero_table_start__ = .
+                0x08000988                        __zero_table_end__ = .
+                0x08000988                        __etext = ALIGN (0x4)
+
+.data           0x20000000        0x0 load address 0x08000988
+                0x20000000                        __data_start__ = .
+ *(vtable)
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__ram_func_section_start = .)
+ *(.ram)
+                [!provide]                        PROVIDE (__ram_func_section_end = .)
+                0x20000000                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                0x20000000                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                0x20000000                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+ *(.jcr*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        __data_end__ = .
+
+.igot.plt       0x20000000        0x0
+ .igot.plt      0x20000000        0x0 build/secure/main_s.o
+
+.bss            0x20000000        0x0
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        __bss_start__ = .
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        __bss_end__ = .
+
+.heap           0x20000000      0xc00
+                0x20000000                        __HeapBase = .
+                0x20000000                        __end__ = .
+                0x20000000                        end = __end__
+                0x20000000                        _end = __end__
+ *(.heap*)
+ .heap          0x20000000      0xc00 build/secure/startup_efr32fg23_s.o
+                0x20000c00                        __HeapLimit = .
+
+.stack_dummy    0x20000000      0x400
+ *(.stack*)
+ .stack         0x20000000      0x400 build/secure/startup_efr32fg23_s.o
+                0x20008000                        __StackTop = (ORIGIN (RAM_S) + LENGTH (RAM_S))
+                0x20007c00                        __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                [!provide]                        PROVIDE (__stack = __StackTop)
+                0x00000001                        ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+                0x00000001                        ASSERT ((LENGTH (FLASH_S) >= (__etext + SIZEOF (.data))), FLASH memory overflowed !)
+OUTPUT(build/secure.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000     0x4e8a
+ .debug_info    0x00000000       0x3d build/secure/aeabi_dummy.o
+ .debug_info    0x0000003d      0x3f4 build/secure/main_s.o
+ .debug_info    0x00000431     0x13b5 build/secure/secure_api.o
+ .debug_info    0x000017e6     0x2154 build/secure/secure_led.o
+ .debug_info    0x0000393a     0x10a5 build/secure/system_efr32fg23_s.o
+ .debug_info    0x000049df      0x4ab build/secure/startup_efr32fg23_s.o
+
+.debug_abbrev   0x00000000      0x5fb
+ .debug_abbrev  0x00000000       0x2f build/secure/aeabi_dummy.o
+ .debug_abbrev  0x0000002f      0x13e build/secure/main_s.o
+ .debug_abbrev  0x0000016d      0x106 build/secure/secure_api.o
+ .debug_abbrev  0x00000273      0x104 build/secure/secure_led.o
+ .debug_abbrev  0x00000377      0x25c build/secure/system_efr32fg23_s.o
+ .debug_abbrev  0x000005d3       0x28 build/secure/startup_efr32fg23_s.o
+
+.debug_aranges  0x00000000      0x138
+ .debug_aranges
+                0x00000000       0x20 build/secure/aeabi_dummy.o
+ .debug_aranges
+                0x00000020       0x20 build/secure/main_s.o
+ .debug_aranges
+                0x00000040       0x20 build/secure/secure_api.o
+ .debug_aranges
+                0x00000060       0x20 build/secure/secure_led.o
+ .debug_aranges
+                0x00000080       0x98 build/secure/system_efr32fg23_s.o
+ .debug_aranges
+                0x00000118       0x20 build/secure/startup_efr32fg23_s.o
+
+.debug_rnglists
+                0x00000000       0xba
+ .debug_rnglists
+                0x00000000       0x13 build/secure/aeabi_dummy.o
+ .debug_rnglists
+                0x00000013       0x13 build/secure/main_s.o
+ .debug_rnglists
+                0x00000026       0x13 build/secure/secure_api.o
+ .debug_rnglists
+                0x00000039       0x13 build/secure/secure_led.o
+ .debug_rnglists
+                0x0000004c       0x6e build/secure/system_efr32fg23_s.o
+
+.debug_macro    0x00000000    0x277df
+ .debug_macro   0x00000000       0x11 build/secure/aeabi_dummy.o
+ .debug_macro   0x00000011      0xac0 build/secure/aeabi_dummy.o
+ .debug_macro   0x00000ad1      0x2ad build/secure/main_s.o
+ .debug_macro   0x00000d7e       0x22 build/secure/main_s.o
+ .debug_macro   0x00000da0       0x8e build/secure/main_s.o
+ .debug_macro   0x00000e2e       0x51 build/secure/main_s.o
+ .debug_macro   0x00000e7f      0x103 build/secure/main_s.o
+ .debug_macro   0x00000f82       0x6a build/secure/main_s.o
+ .debug_macro   0x00000fec      0x1df build/secure/main_s.o
+ .debug_macro   0x000011cb      0x93a build/secure/main_s.o
+ .debug_macro   0x00001b05       0x1c build/secure/main_s.o
+ .debug_macro   0x00001b21       0x2a build/secure/main_s.o
+ .debug_macro   0x00001b4b      0x110 build/secure/main_s.o
+ .debug_macro   0x00001c5b     0x17ea build/secure/main_s.o
+ .debug_macro   0x00003445       0x5e build/secure/main_s.o
+ .debug_macro   0x000034a3       0x16 build/secure/main_s.o
+ .debug_macro   0x000034b9       0x58 build/secure/main_s.o
+ .debug_macro   0x00003511      0xeaa build/secure/main_s.o
+ .debug_macro   0x000043bb     0x15cd build/secure/main_s.o
+ .debug_macro   0x00005988      0x323 build/secure/main_s.o
+ .debug_macro   0x00005cab       0x34 build/secure/main_s.o
+ .debug_macro   0x00005cdf      0x327 build/secure/main_s.o
+ .debug_macro   0x00006006      0x456 build/secure/main_s.o
+ .debug_macro   0x0000645c      0x240 build/secure/main_s.o
+ .debug_macro   0x0000669c      0x156 build/secure/main_s.o
+ .debug_macro   0x000067f2      0x7f7 build/secure/main_s.o
+ .debug_macro   0x00006fe9      0x363 build/secure/main_s.o
+ .debug_macro   0x0000734c     0x1820 build/secure/main_s.o
+ .debug_macro   0x00008b6c       0x10 build/secure/main_s.o
+ .debug_macro   0x00008b7c      0xb8f build/secure/main_s.o
+ .debug_macro   0x0000970b     0x3b1b build/secure/main_s.o
+ .debug_macro   0x0000d226      0xcb2 build/secure/main_s.o
+ .debug_macro   0x0000ded8       0x70 build/secure/main_s.o
+ .debug_macro   0x0000df48     0x15db build/secure/main_s.o
+ .debug_macro   0x0000f523     0x210a build/secure/main_s.o
+ .debug_macro   0x0001162d      0x53b build/secure/main_s.o
+ .debug_macro   0x00011b68      0xfe5 build/secure/main_s.o
+ .debug_macro   0x00012b4d      0xc49 build/secure/main_s.o
+ .debug_macro   0x00013796       0x34 build/secure/main_s.o
+ .debug_macro   0x000137ca      0x308 build/secure/main_s.o
+ .debug_macro   0x00013ad2      0x80c build/secure/main_s.o
+ .debug_macro   0x000142de      0x143 build/secure/main_s.o
+ .debug_macro   0x00014421     0x1b22 build/secure/main_s.o
+ .debug_macro   0x00015f43      0x676 build/secure/main_s.o
+ .debug_macro   0x000165b9      0xb85 build/secure/main_s.o
+ .debug_macro   0x0001713e      0x74f build/secure/main_s.o
+ .debug_macro   0x0001788d      0x33d build/secure/main_s.o
+ .debug_macro   0x00017bca       0xe2 build/secure/main_s.o
+ .debug_macro   0x00017cac      0x338 build/secure/main_s.o
+ .debug_macro   0x00017fe4      0x91e build/secure/main_s.o
+ .debug_macro   0x00018902     0x1fc1 build/secure/main_s.o
+ .debug_macro   0x0001a8c3      0x9e1 build/secure/main_s.o
+ .debug_macro   0x0001b2a4     0x158e build/secure/main_s.o
+ .debug_macro   0x0001c832      0xe7d build/secure/main_s.o
+ .debug_macro   0x0001d6af     0x105c build/secure/main_s.o
+ .debug_macro   0x0001e70b      0x8e1 build/secure/main_s.o
+ .debug_macro   0x0001efec     0x1af8 build/secure/main_s.o
+ .debug_macro   0x00020ae4     0x113c build/secure/main_s.o
+ .debug_macro   0x00021c20      0x6ea build/secure/main_s.o
+ .debug_macro   0x0002230a      0x6c1 build/secure/main_s.o
+ .debug_macro   0x000229cb     0x1641 build/secure/main_s.o
+ .debug_macro   0x0002400c     0x18dc build/secure/main_s.o
+ .debug_macro   0x000258e8      0x316 build/secure/main_s.o
+ .debug_macro   0x00025bfe     0x1199 build/secure/main_s.o
+ .debug_macro   0x00026d97      0x2bd build/secure/secure_api.o
+ .debug_macro   0x00027054      0x190 build/secure/secure_api.o
+ .debug_macro   0x000271e4       0x63 build/secure/secure_api.o
+ .debug_macro   0x00027247      0x2ab build/secure/secure_led.o
+ .debug_macro   0x000274f2      0x2ed build/secure/system_efr32fg23_s.o
+
+.debug_line     0x00000000     0x2146
+ .debug_line    0x00000000       0x49 build/secure/aeabi_dummy.o
+ .debug_line    0x00000049      0x7c8 build/secure/main_s.o
+ .debug_line    0x00000811      0x781 build/secure/secure_api.o
+ .debug_line    0x00000f92      0x779 build/secure/secure_led.o
+ .debug_line    0x0000170b      0x9c4 build/secure/system_efr32fg23_s.o
+ .debug_line    0x000020cf       0x77 build/secure/startup_efr32fg23_s.o
+
+.debug_str      0x00000000    0xffe11
+ .debug_str     0x00000000    0xffe11 build/secure/aeabi_dummy.o
+                               0x2e0e (size before relaxing)
+ .debug_str     0x000ffe11    0xfe0ea build/secure/main_s.o
+ .debug_str     0x000ffe11    0xff4a8 build/secure/secure_api.o
+ .debug_str     0x000ffe11    0xff63d build/secure/secure_led.o
+ .debug_str     0x000ffe11    0xfed4b build/secure/system_efr32fg23_s.o
+ .debug_str     0x000ffe11      0x694 build/secure/startup_efr32fg23_s.o
+
+.comment        0x00000000       0x46
+ .comment       0x00000000       0x46 build/secure/aeabi_dummy.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046       0x47 build/secure/main_s.o
+ .comment       0x00000046       0x47 build/secure/secure_api.o
+ .comment       0x00000046       0x47 build/secure/secure_led.o
+ .comment       0x00000046       0x47 build/secure/system_efr32fg23_s.o
+
+.ARM.attributes
+                0x00000000       0x32
+ .ARM.attributes
+                0x00000000       0x34 build/secure/aeabi_dummy.o
+ .ARM.attributes
+                0x00000034       0x34 build/secure/main_s.o
+ .ARM.attributes
+                0x00000068       0x34 build/secure/secure_api.o
+ .ARM.attributes
+                0x0000009c       0x34 build/secure/secure_led.o
+ .ARM.attributes
+                0x000000d0       0x34 build/secure/system_efr32fg23_s.o
+ .ARM.attributes
+                0x00000104       0x20 build/secure/startup_efr32fg23_s.o
+ .ARM.attributes
+                0x00000124       0x20 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+
+.debug_frame    0x00000000      0x2f4
+ .debug_frame   0x00000000       0x28 build/secure/aeabi_dummy.o
+ .debug_frame   0x00000028       0x30 build/secure/main_s.o
+ .debug_frame   0x00000058       0x30 build/secure/secure_api.o
+ .debug_frame   0x00000088       0x30 build/secure/secure_led.o
+ .debug_frame   0x000000b8      0x23c build/secure/system_efr32fg23_s.o
+
+.debug_line_str
+                0x00000000      0x106
+ .debug_line_str
+                0x00000000      0x106 build/secure/startup_efr32fg23_s.o
+                                 0x35 (size before relaxing)
+ .debug_line_str
+                0x00000106       0xd1 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
