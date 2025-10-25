@@ -7,7 +7,7 @@ void delay(volatile uint32_t count)
   while(count--);
 }
 
-int main(void)
+int main_ns(void)
 {
   while(1)
   {

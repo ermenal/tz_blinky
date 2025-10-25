@@ -1,0 +1,162 @@
+[
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-mcmse",
+      "-Icommon",
+      "-Isecure",
+      "-c",
+      "-o",
+      "build/secure/aeabi_dummy.o",
+      "secure/aeabi_dummy.c"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/secure/aeabi_dummy.c",
+    "output": "/home/ermenal/tz_blinky/build/secure/aeabi_dummy.o"
+  },
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-mcmse",
+      "-Icommon",
+      "-Isecure",
+      "-c",
+      "-o",
+      "build/secure/main_s.o",
+      "secure/main_s.c"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/secure/main_s.c",
+    "output": "/home/ermenal/tz_blinky/build/secure/main_s.o"
+  },
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-mcmse",
+      "-Icommon",
+      "-Isecure",
+      "-c",
+      "-o",
+      "build/secure/secure_api.o",
+      "secure/secure_api.c"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/secure/secure_api.c",
+    "output": "/home/ermenal/tz_blinky/build/secure/secure_api.o"
+  },
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-mcmse",
+      "-Icommon",
+      "-Isecure",
+      "-c",
+      "-o",
+      "build/secure/secure_led.o",
+      "secure/secure_led.c"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/secure/secure_led.c",
+    "output": "/home/ermenal/tz_blinky/build/secure/secure_led.o"
+  },
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-mcmse",
+      "-Icommon",
+      "-Isecure",
+      "-c",
+      "-o",
+      "build/secure/system_efr32fg23_s.o",
+      "secure/system_efr32fg23_s.c"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/secure/system_efr32fg23_s.c",
+    "output": "/home/ermenal/tz_blinky/build/secure/system_efr32fg23_s.o"
+  },
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-mcmse",
+      "-Icommon",
+      "-Isecure",
+      "-c",
+      "-o",
+      "build/secure/startup_efr32fg23_s.o",
+      "secure/startup_efr32fg23_s.S"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/secure/startup_efr32fg23_s.S",
+    "output": "/home/ermenal/tz_blinky/build/secure/startup_efr32fg23_s.o"
+  },
+  {
+    "arguments": [
+      "/home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m33",
+      "-mthumb",
+      "-g3",
+      "-Wall",
+      "-O0",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-exceptions",
+      "-Icommon",
+      "-Inon_secure",
+      "-c",
+      "-o",
+      "build/non_secure/main_ns.o",
+      "non_secure/main_ns.c"
+    ],
+    "directory": "/home/ermenal/tz_blinky",
+    "file": "/home/ermenal/tz_blinky/non_secure/main_ns.c",
+    "output": "/home/ermenal/tz_blinky/build/non_secure/main_ns.o"
+  }
+]

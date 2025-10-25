@@ -1,0 +1,9 @@
+# J-Link Commander script template
+# This file is a small template used by the start script. It contains a token
+# __S37_PATH__ that the shell script will replace with the absolute path to the
+# .s37 file you want to flash.
+r
+h
+loadfile __S37_PATH__
+r
+exit
