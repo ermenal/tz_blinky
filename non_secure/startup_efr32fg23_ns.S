@@ -5,23 +5,23 @@
 .arch armv8-m.main
 
 /* Non-Secure Stack */
-.section .stack_ns, "w", %progbits
+.section .stack, "w", %progbits
 .align 3
-.equ    Stack_Size_NS, 2048
-.globl  __StackTop_NS
-.globl  __StackLimit_NS
-__StackLimit_NS:
-.space  Stack_Size_NS
-.size   __StackLimit_NS,. - __StackLimit_NS
-__StackTop_NS:
-.size .stack_ns,. -.stack_ns
+.equ    Stack_Size, 2048
+.globl  __StackTop
+.globl  __StackLimit
+__StackLimit:
+ .space  Stack_Size
+ .size   __StackLimit,. - __StackLimit
+__StackTop:
+ .size .stack,. -.stack
 
 /* Non-Secure Vector Table */
-.section .isr_vector_ns, "a", %progbits
+.section .isr_vector, "a", %progbits
 .align 2
-.globl __isr_vector_ns
-__isr_vector_ns:
- .long   __StackTop_NS         /* Top of Non-Secure Stack */
+.globl __isr_vector
+__isr_vector:
+ .long   __StackTop         /* Top of Non-Secure Stack */
  .long   Reset_Handler_NS      /* Non-Secure Reset Handler */
   /* Add other non-secure interrupt handlers here if needed */
 
@@ -33,13 +33,41 @@ __isr_vector_ns:
 .type   Reset_Handler_NS, %function
 Reset_Handler_NS:
   /*
-   * The secure world has already performed the transition.
-   * This handler's only job is to call the non-secure main function.
-   * A more complex application would copy its own.data and zero its.bss here.
+   * This is the non-secure Reset_Handler_NS.
+   * It performs the standard C runtime initialization.
    */
+
+  /* Copy data from Flash to RAM */
+  ldr   r1, =_etext
+  ldr   r2, =_sdata
+  ldr   r3, =_edata
+  subs  r3, r2
+  ble  .L_zero_bss
+
+.L_copy_data:
+  subs  r3, 4
+  ldr   r0, [r1, r3]
+  str   r0, [r2, r3]
+  bgt  .L_copy_data
+
+.L_zero_bss:
+  /* Zero out the.bss section */
+  ldr   r2, =_sbss
+  ldr   r3, =_ebss
+  subs  r3, r2
+  ble  .L_call_main
+
+  movs  r0, 0
+.L_zero_loop:
+  subs  r3, 4
+  str   r0, [r2, r3]
+  bgt  .L_zero_loop
+
+.L_call_main:
+  /* Call non-secure main */
   bl    main_ns
 
-.L_loop_ns:
-  b  .L_loop_ns
+.L_loop:
+  b .L_loop
 
 .size Reset_Handler_NS,. - Reset_Handler_NS
