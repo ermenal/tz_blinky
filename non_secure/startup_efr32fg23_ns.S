@@ -37,7 +37,7 @@ Reset_Handler_NS:
    * This handler's only job is to call the non-secure main function.
    * A more complex application would copy its own.data and zero its.bss here.
    */
-  bl    main
+  bl    main_ns
 
 .L_loop_ns:
   b  .L_loop_ns
