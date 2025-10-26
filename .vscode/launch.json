@@ -15,7 +15,8 @@
             "servertype": "jlink",
             "device": "EFR32FG23B010F512IM48",
             "postStartSessionCommands": [
-                "add-symbol-file ${workspaceFolder}/build/non_secure.elf 0x08020000"
+                "add-symbol-file build/non_secure.elf 0x08020000",
+                "set print type hex on"
             ]
         }
     ]

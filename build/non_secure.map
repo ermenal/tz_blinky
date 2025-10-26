@@ -11,35 +11,9 @@ Discarded input sections
  .text          0x00000000        0x0 build/non_secure/main_ns.o
  .data          0x00000000        0x0 build/non_secure/main_ns.o
  .bss           0x00000000        0x0 build/non_secure/main_ns.o
- .text          0x00000000        0x0 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .data          0x00000000        0x0 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .bss           0x00000000        0x0 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .vectors_ns    0x00000000      0x788 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .text_ns       0x00000000       0x50 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .ARM.extab.text_ns
-                0x00000000        0x0 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .ARM.exidx.text_ns
-                0x00000000        0x8 build/non_secure/startup_efr32fg23_ns_nieuw.o
- .ARM.attributes
-                0x00000000       0x20 build/non_secure/startup_efr32fg23_ns_nieuw.o
  .data          0x00000000        0x0 build/non_secure/startup_efr32fg23_ns.o
  .bss           0x00000000        0x0 build/non_secure/startup_efr32fg23_ns.o
  .ARM.extab     0x00000000        0x0 build/non_secure/startup_efr32fg23_ns.o
- .text          0x00000000       0x3c build/non_secure/startup_old.o
- .data          0x00000000        0x0 build/non_secure/startup_old.o
- .bss           0x00000000        0x0 build/non_secure/startup_old.o
- .isr_vector_ns
-                0x00000000        0x8 build/non_secure/startup_old.o
- .debug_line    0x00000000       0x64 build/non_secure/startup_old.o
- .debug_line_str
-                0x00000000       0x31 build/non_secure/startup_old.o
- .debug_info    0x00000000       0x31 build/non_secure/startup_old.o
- .debug_abbrev  0x00000000       0x28 build/non_secure/startup_old.o
- .debug_aranges
-                0x00000000       0x20 build/non_secure/startup_old.o
- .debug_str     0x00000000       0x50 build/non_secure/startup_old.o
- .ARM.attributes
-                0x00000000       0x20 build/non_secure/startup_old.o
 
 Memory Configuration
 
@@ -51,111 +25,20 @@ RAM_NS           0x20008000         0x00008000         xrw
 Linker script and memory map
 
 LOAD build/non_secure/main_ns.o
-LOAD build/non_secure/startup_efr32fg23_ns_nieuw.o
 LOAD build/non_secure/startup_efr32fg23_ns.o
-LOAD build/non_secure/startup_old.o
 LOAD build/secure_cmse_lib.o
 
-.text           0x08020000      0x848
- *(.vectors)
- .vectors       0x08020000      0x7c0 build/non_secure/startup_efr32fg23_ns.o
-                0x08020000                __Vectors
-                0x080207c0                __Vectors_End
+.text           0x08020000      0x800
+ *(.vectors_ns)
+ .vectors_ns    0x08020000      0x780 build/non_secure/startup_efr32fg23_ns.o
  *(.text*)
- .text.delay    0x080207c0       0x20 build/non_secure/main_ns.o
-                0x080207c0                delay
- .text.main_ns  0x080207e0       0x14 build/non_secure/main_ns.o
-                0x080207e0                main_ns
- .text          0x080207f4       0x54 build/non_secure/startup_efr32fg23_ns.o
-                0x080207f4                Reset_Handler
-                0x08020832                HardFault_Handler
-                0x08020834                ULFRCO_IRQHandler
-                0x08020834                SW2_IRQHandler
-                0x08020834                TIMER2_IRQHandler
-                0x08020834                DebugMon_Handler
-                0x08020834                USART0_TX_IRQHandler
-                0x08020834                IADC_IRQHandler
-                0x08020834                EUSART0_TX_IRQHandler
-                0x08020834                I2C0_IRQHandler
-                0x08020834                LFXO_IRQHandler
-                0x08020834                VDAC_IRQHandler
-                0x08020834                SMU_SECURE_IRQHandler
-                0x08020834                SysTick_Handler
-                0x08020834                SYSRTC_SEQ_IRQHandler
-                0x08020834                EMUEFP_IRQHandler
-                0x08020834                EUSART2_TX_IRQHandler
-                0x08020834                PendSV_Handler
-                0x08020834                NMI_Handler
-                0x08020834                SYNTH_IRQHandler
-                0x08020834                HOSTMAILBOX_IRQHandler
-                0x08020834                HFXO0_IRQHandler
-                0x08020834                I2C1_IRQHandler
-                0x08020834                WDOG0_IRQHandler
-                0x08020834                TIMER3_IRQHandler
-                0x08020834                SYSCFG_IRQHandler
-                0x08020834                RFECA1_IRQHandler
-                0x08020834                EMUDG_IRQHandler
-                0x08020834                MSC_IRQHandler
-                0x08020834                DPLL0_IRQHandler
-                0x08020834                UsageFault_Handler
-                0x08020834                WDOG1_IRQHandler
-                0x08020834                M33CTI1_IRQHandler
-                0x08020834                TIMER4_IRQHandler
-                0x08020834                GPIO_EVEN_IRQHandler
-                0x08020834                LDMA_IRQHandler
-                0x08020834                SEMBTX_IRQHandler
-                0x08020834                SW0_IRQHandler
-                0x08020834                TIMER0_IRQHandler
-                0x08020834                LCD_IRQHandler
-                0x08020834                LETIMER0_IRQHandler
-                0x08020834                EUSART1_RX_IRQHandler
-                0x08020834                TIMER1_IRQHandler
-                0x08020834                HFRCO0_IRQHandler
-                0x08020834                SecureFault_Handler
-                0x08020834                BUFC_IRQHandler
-                0x08020834                DCDC_IRQHandler
-                0x08020834                MODEM_IRQHandler
-                0x08020834                Default_Handler
-                0x08020834                RAC_SEQ_IRQHandler
-                0x08020834                FRC_PRI_IRQHandler
-                0x08020834                SW3_IRQHandler
-                0x08020834                EMU_IRQHandler
-                0x08020834                KERNEL0_IRQHandler
-                0x08020834                FRC_IRQHandler
-                0x08020834                PCNT0_IRQHandler
-                0x08020834                KERNEL1_IRQHandler
-                0x08020834                AGC_IRQHandler
-                0x08020834                EUSART1_TX_IRQHandler
-                0x08020834                KEYSCAN_IRQHandler
-                0x08020834                HFRCOEM23_IRQHandler
-                0x08020834                sl_app_properties
-                0x08020834                BURTC_IRQHandler
-                0x08020834                SEMBRX_IRQHandler
-                0x08020834                RFECA0_IRQHandler
-                0x08020834                LFRCO_IRQHandler
-                0x08020834                ACMP0_IRQHandler
-                0x08020834                USART0_RX_IRQHandler
-                0x08020834                MemManage_Handler
-                0x08020834                SVC_Handler
-                0x08020834                EUSART2_RX_IRQHandler
-                0x08020834                SMU_S_PRIVILEGED_IRQHandler
-                0x08020834                SW1_IRQHandler
-                0x08020834                CMU_IRQHandler
-                0x08020834                EUSART0_RX_IRQHandler
-                0x08020834                RAC_RSM_IRQHandler
-                0x08020834                SETAMPERHOST_IRQHandler
-                0x08020834                LESENSE_IRQHandler
-                0x08020834                GPIO_ODD_IRQHandler
-                0x08020834                AES_IRQHandler
-                0x08020834                M33CTI0_IRQHandler
-                0x08020834                ICACHE0_IRQHandler
-                0x08020834                SMU_NS_PRIVILEGED_IRQHandler
-                0x08020834                FPUEXH_IRQHandler
-                0x08020834                PROTIMER_IRQHandler
-                0x08020834                ACMP1_IRQHandler
-                0x08020834                BusFault_Handler
-                0x08020834                MPAHBRAM_IRQHandler
-                0x08020834                SYSRTC_APP_IRQHandler
+ .text.delay    0x08020780       0x20 build/non_secure/main_ns.o
+                0x08020780                delay
+ .text.main_ns  0x080207a0        0xe build/non_secure/main_ns.o
+                0x080207a0                main_ns
+ *fill*         0x080207ae        0x2 
+ .text          0x080207b0       0x50 build/non_secure/startup_efr32fg23_ns.o
+                0x080207b0                Reset_HandlerNS
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -171,49 +54,49 @@ LOAD build/secure_cmse_lib.o
  *(.rodata*)
  *(.eh_frame*)
 
-.glue_7         0x08020848        0x0
- .glue_7        0x08020848        0x0 linker stubs
+.glue_7         0x08020800        0x0
+ .glue_7        0x08020800        0x0 linker stubs
 
-.glue_7t        0x08020848        0x0
- .glue_7t       0x08020848        0x0 linker stubs
+.glue_7t        0x08020800        0x0
+ .glue_7t       0x08020800        0x0 linker stubs
 
-.vfp11_veneer   0x08020848        0x0
- .vfp11_veneer  0x08020848        0x0 linker stubs
+.vfp11_veneer   0x08020800        0x0
+ .vfp11_veneer  0x08020800        0x0 linker stubs
 
-.v4_bx          0x08020848        0x0
- .v4_bx         0x08020848        0x0 linker stubs
+.v4_bx          0x08020800        0x0
+ .v4_bx         0x08020800        0x0 linker stubs
 
-.iplt           0x08020848        0x0
- .iplt          0x08020848        0x0 build/non_secure/main_ns.o
+.iplt           0x08020800        0x0
+ .iplt          0x08020800        0x0 build/non_secure/main_ns.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08020848                        __exidx_start = .
+                0x08020800                        __exidx_start = .
 
-.ARM.exidx      0x08020848       0x10
+.ARM.exidx      0x08020800       0x10
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08020848       0x10 build/non_secure/startup_efr32fg23_ns.o
-                                 0x18 (size before relaxing)
-                0x08020858                        __exidx_end = .
+ .ARM.exidx     0x08020800       0x10 build/non_secure/startup_efr32fg23_ns.o
+                                  0x8 (size before relaxing)
+                0x08020810                        __exidx_end = .
 
-.rel.dyn        0x08020858        0x0
- .rel.iplt      0x08020858        0x0 build/non_secure/main_ns.o
+.rel.dyn        0x08020810        0x0
+ .rel.iplt      0x08020810        0x0 build/non_secure/main_ns.o
 
-.copy.table     0x08020858        0xc
-                0x08020858                        . = ALIGN (0x4)
-                0x08020858                        __copy_table_start__ = .
-                0x08020858        0x4 LONG 0x8020864 __etext
-                0x0802085c        0x4 LONG 0x20008000 __data_start__
-                0x08020860        0x4 LONG 0x0 ((__data_end__ - __data_start__) / 0x4)
-                0x08020864                        __copy_table_end__ = .
+.copy.table     0x08020810        0xc
+                0x08020810                        . = ALIGN (0x4)
+                0x08020810                        __copy_table_start__ = .
+                0x08020810        0x4 LONG 0x802081c __etext
+                0x08020814        0x4 LONG 0x20008000 __data_start__
+                0x08020818        0x4 LONG 0x0 ((__data_end__ - __data_start__) / 0x4)
+                0x0802081c                        __copy_table_end__ = .
 
-.zero.table     0x08020864        0x0
-                0x08020864                        . = ALIGN (0x4)
-                0x08020864                        __zero_table_start__ = .
-                0x08020864                        __zero_table_end__ = .
-                0x08020864                        __etext = ALIGN (0x4)
+.zero.table     0x0802081c        0x0
+                0x0802081c                        . = ALIGN (0x4)
+                0x0802081c                        __zero_table_start__ = .
+                0x0802081c                        __zero_table_end__ = .
+                0x0802081c                        __etext = ALIGN (0x4)
 
-.data           0x20008000        0x0 load address 0x08020864
+.data           0x20008000        0x0 load address 0x0802081c
                 0x20008000                        __data_start__ = .
  *(vtable)
  *(.data*)
@@ -251,42 +134,33 @@ LOAD build/secure_cmse_lib.o
                 0x20008000                        . = ALIGN (0x4)
                 0x20008000                        __bss_end__ = .
 
-.heap           0x20008000     0x1800
+.heap           0x20008000      0xc00
                 0x20008000                        __HeapBase = .
                 0x20008000                        __end__ = .
                 0x20008000                        end = __end__
                 0x20008000                        _end = __end__
  *(.heap*)
- .heap_ns       0x20008000      0xc00 build/non_secure/startup_efr32fg23_ns_nieuw.o
-                0x20008000                __HeapBaseNS
-                0x20008c00                __HeapLimitNS
- .heap          0x20008c00      0xc00 build/non_secure/startup_efr32fg23_ns.o
-                0x20009800                        __HeapLimit = .
+ .heap          0x20008000      0xc00 build/non_secure/startup_efr32fg23_ns.o
+                0x20008c00                        __HeapLimit = .
 
-.stack_dummy    0x20008000     0x1000
+.stack_dummy    0x20008000      0x400
  *(.stack*)
- .stack_ns      0x20008000      0x400 build/non_secure/startup_efr32fg23_ns_nieuw.o
-                0x20008000                __StackLimitNS
-                0x20008400                __StackTopNS
- .stack         0x20008400      0x400 build/non_secure/startup_efr32fg23_ns.o
- .stack_ns      0x20008800      0x800 build/non_secure/startup_old.o
-                0x20008800                __StackLimit_NS
-                0x20009000                __StackTop_NS
+ .stack         0x20008000      0x400 build/non_secure/startup_efr32fg23_ns.o
                 0x20010000                        __StackTop = (ORIGIN (RAM_NS) + LENGTH (RAM_NS))
-                0x2000f000                        __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x2000fc00                        __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 [!provide]                        PROVIDE (__stack = __StackTop)
                 0x00000001                        ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
                 0x00000001                        ASSERT ((LENGTH (FLASH_NS) >= (__etext + SIZEOF (.data))), FLASH memory overflowed !)
 OUTPUT(build/non_secure.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000      0x579
- .debug_info    0x00000000       0xce build/non_secure/main_ns.o
- .debug_info    0x000000ce      0x4ab build/non_secure/startup_efr32fg23_ns.o
+.debug_info     0x00000000       0xf7
+ .debug_info    0x00000000       0xc6 build/non_secure/main_ns.o
+ .debug_info    0x000000c6       0x31 build/non_secure/startup_efr32fg23_ns.o
 
-.debug_abbrev   0x00000000       0xc2
- .debug_abbrev  0x00000000       0x9a build/non_secure/main_ns.o
- .debug_abbrev  0x0000009a       0x28 build/non_secure/startup_efr32fg23_ns.o
+.debug_abbrev   0x00000000       0xaf
+ .debug_abbrev  0x00000000       0x87 build/non_secure/main_ns.o
+ .debug_abbrev  0x00000087       0x28 build/non_secure/startup_efr32fg23_ns.o
 
 .debug_aranges  0x00000000       0x48
  .debug_aranges
@@ -309,14 +183,14 @@ LOAD linker stubs
  .debug_macro   0x00000d31       0x6a build/non_secure/main_ns.o
  .debug_macro   0x00000d9b      0x1df build/non_secure/main_ns.o
 
-.debug_line     0x00000000      0x361
- .debug_line    0x00000000      0x2ec build/non_secure/main_ns.o
- .debug_line    0x000002ec       0x75 build/non_secure/startup_efr32fg23_ns.o
+.debug_line     0x00000000      0x359
+ .debug_line    0x00000000      0x2ea build/non_secure/main_ns.o
+ .debug_line    0x000002ea       0x6f build/non_secure/startup_efr32fg23_ns.o
 
-.debug_str      0x00000000     0x421c
- .debug_str     0x00000000     0x421c build/non_secure/main_ns.o
-                               0x3d4c (size before relaxing)
- .debug_str     0x0000421c      0x699 build/non_secure/startup_efr32fg23_ns.o
+.debug_str      0x00000000     0x3c17
+ .debug_str     0x00000000     0x3c17 build/non_secure/main_ns.o
+                               0x3d3b (size before relaxing)
+ .debug_str     0x00003c17       0x58 build/non_secure/startup_efr32fg23_ns.o
 
 .comment        0x00000000       0x46
  .comment       0x00000000       0x46 build/non_secure/main_ns.o

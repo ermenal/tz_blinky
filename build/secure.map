@@ -520,7 +520,7 @@ LOAD build/secure/system_efr32fg23_s.o
 LOAD build/secure/startup_efr32fg23_s.o
 LOAD /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a
 
-.text           0x08000000      0x96c
+.text           0x08000000      0x984
  *(.vectors)
  .vectors       0x08000000      0x7c0 build/secure/startup_efr32fg23_s.o
                 0x08000000                __Vectors
@@ -540,98 +540,98 @@ LOAD /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x
  .text.SystemInit
                 0x08000878       0x64 build/secure/system_efr32fg23_s.o
                 0x08000878                SystemInit
- .text          0x080008dc       0x58 build/secure/startup_efr32fg23_s.o
+ .text          0x080008dc       0x70 build/secure/startup_efr32fg23_s.o
                 0x080008dc                Reset_Handler
-                0x0800091e                HardFault_Handler
-                0x08000920                ULFRCO_IRQHandler
-                0x08000920                SW2_IRQHandler
-                0x08000920                TIMER2_IRQHandler
-                0x08000920                DebugMon_Handler
-                0x08000920                USART0_TX_IRQHandler
-                0x08000920                IADC_IRQHandler
-                0x08000920                EUSART0_TX_IRQHandler
-                0x08000920                I2C0_IRQHandler
-                0x08000920                LFXO_IRQHandler
-                0x08000920                VDAC_IRQHandler
-                0x08000920                SMU_SECURE_IRQHandler
-                0x08000920                SysTick_Handler
-                0x08000920                SYSRTC_SEQ_IRQHandler
-                0x08000920                EMUEFP_IRQHandler
-                0x08000920                EUSART2_TX_IRQHandler
-                0x08000920                PendSV_Handler
-                0x08000920                NMI_Handler
-                0x08000920                SYNTH_IRQHandler
-                0x08000920                HOSTMAILBOX_IRQHandler
-                0x08000920                HFXO0_IRQHandler
-                0x08000920                I2C1_IRQHandler
-                0x08000920                WDOG0_IRQHandler
-                0x08000920                TIMER3_IRQHandler
-                0x08000920                SYSCFG_IRQHandler
-                0x08000920                RFECA1_IRQHandler
-                0x08000920                EMUDG_IRQHandler
-                0x08000920                MSC_IRQHandler
-                0x08000920                DPLL0_IRQHandler
-                0x08000920                UsageFault_Handler
-                0x08000920                WDOG1_IRQHandler
-                0x08000920                M33CTI1_IRQHandler
-                0x08000920                TIMER4_IRQHandler
-                0x08000920                GPIO_EVEN_IRQHandler
-                0x08000920                LDMA_IRQHandler
-                0x08000920                SEMBTX_IRQHandler
-                0x08000920                SW0_IRQHandler
-                0x08000920                TIMER0_IRQHandler
-                0x08000920                LCD_IRQHandler
-                0x08000920                LETIMER0_IRQHandler
-                0x08000920                EUSART1_RX_IRQHandler
-                0x08000920                TIMER1_IRQHandler
-                0x08000920                HFRCO0_IRQHandler
-                0x08000920                SecureFault_Handler
-                0x08000920                BUFC_IRQHandler
-                0x08000920                DCDC_IRQHandler
-                0x08000920                MODEM_IRQHandler
-                0x08000920                Default_Handler
-                0x08000920                RAC_SEQ_IRQHandler
-                0x08000920                FRC_PRI_IRQHandler
-                0x08000920                SW3_IRQHandler
-                0x08000920                EMU_IRQHandler
-                0x08000920                KERNEL0_IRQHandler
-                0x08000920                FRC_IRQHandler
-                0x08000920                PCNT0_IRQHandler
-                0x08000920                KERNEL1_IRQHandler
-                0x08000920                AGC_IRQHandler
-                0x08000920                EUSART1_TX_IRQHandler
-                0x08000920                KEYSCAN_IRQHandler
-                0x08000920                HFRCOEM23_IRQHandler
-                0x08000920                sl_app_properties
-                0x08000920                BURTC_IRQHandler
-                0x08000920                SEMBRX_IRQHandler
-                0x08000920                RFECA0_IRQHandler
-                0x08000920                LFRCO_IRQHandler
-                0x08000920                ACMP0_IRQHandler
-                0x08000920                USART0_RX_IRQHandler
-                0x08000920                MemManage_Handler
-                0x08000920                SVC_Handler
-                0x08000920                EUSART2_RX_IRQHandler
-                0x08000920                SMU_S_PRIVILEGED_IRQHandler
-                0x08000920                SW1_IRQHandler
-                0x08000920                CMU_IRQHandler
-                0x08000920                EUSART0_RX_IRQHandler
-                0x08000920                RAC_RSM_IRQHandler
-                0x08000920                SETAMPERHOST_IRQHandler
-                0x08000920                LESENSE_IRQHandler
-                0x08000920                GPIO_ODD_IRQHandler
-                0x08000920                AES_IRQHandler
-                0x08000920                M33CTI0_IRQHandler
-                0x08000920                ICACHE0_IRQHandler
-                0x08000920                SMU_NS_PRIVILEGED_IRQHandler
-                0x08000920                FPUEXH_IRQHandler
-                0x08000920                PROTIMER_IRQHandler
-                0x08000920                ACMP1_IRQHandler
-                0x08000920                BusFault_Handler
-                0x08000920                MPAHBRAM_IRQHandler
-                0x08000920                SYSRTC_APP_IRQHandler
- .text          0x08000934       0x38 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
-                0x08000934                __gnu_cmse_nonsecure_call
+                0x0800092c                HardFault_Handler
+                0x0800092e                ULFRCO_IRQHandler
+                0x0800092e                SW2_IRQHandler
+                0x0800092e                TIMER2_IRQHandler
+                0x0800092e                DebugMon_Handler
+                0x0800092e                USART0_TX_IRQHandler
+                0x0800092e                IADC_IRQHandler
+                0x0800092e                EUSART0_TX_IRQHandler
+                0x0800092e                I2C0_IRQHandler
+                0x0800092e                LFXO_IRQHandler
+                0x0800092e                VDAC_IRQHandler
+                0x0800092e                SMU_SECURE_IRQHandler
+                0x0800092e                SysTick_Handler
+                0x0800092e                SYSRTC_SEQ_IRQHandler
+                0x0800092e                EMUEFP_IRQHandler
+                0x0800092e                EUSART2_TX_IRQHandler
+                0x0800092e                PendSV_Handler
+                0x0800092e                NMI_Handler
+                0x0800092e                SYNTH_IRQHandler
+                0x0800092e                HOSTMAILBOX_IRQHandler
+                0x0800092e                HFXO0_IRQHandler
+                0x0800092e                I2C1_IRQHandler
+                0x0800092e                WDOG0_IRQHandler
+                0x0800092e                TIMER3_IRQHandler
+                0x0800092e                SYSCFG_IRQHandler
+                0x0800092e                RFECA1_IRQHandler
+                0x0800092e                EMUDG_IRQHandler
+                0x0800092e                MSC_IRQHandler
+                0x0800092e                DPLL0_IRQHandler
+                0x0800092e                UsageFault_Handler
+                0x0800092e                WDOG1_IRQHandler
+                0x0800092e                M33CTI1_IRQHandler
+                0x0800092e                TIMER4_IRQHandler
+                0x0800092e                GPIO_EVEN_IRQHandler
+                0x0800092e                LDMA_IRQHandler
+                0x0800092e                SEMBTX_IRQHandler
+                0x0800092e                SW0_IRQHandler
+                0x0800092e                TIMER0_IRQHandler
+                0x0800092e                LCD_IRQHandler
+                0x0800092e                LETIMER0_IRQHandler
+                0x0800092e                EUSART1_RX_IRQHandler
+                0x0800092e                TIMER1_IRQHandler
+                0x0800092e                HFRCO0_IRQHandler
+                0x0800092e                SecureFault_Handler
+                0x0800092e                BUFC_IRQHandler
+                0x0800092e                DCDC_IRQHandler
+                0x0800092e                MODEM_IRQHandler
+                0x0800092e                Default_Handler
+                0x0800092e                RAC_SEQ_IRQHandler
+                0x0800092e                FRC_PRI_IRQHandler
+                0x0800092e                SW3_IRQHandler
+                0x0800092e                EMU_IRQHandler
+                0x0800092e                KERNEL0_IRQHandler
+                0x0800092e                FRC_IRQHandler
+                0x0800092e                PCNT0_IRQHandler
+                0x0800092e                KERNEL1_IRQHandler
+                0x0800092e                AGC_IRQHandler
+                0x0800092e                EUSART1_TX_IRQHandler
+                0x0800092e                KEYSCAN_IRQHandler
+                0x0800092e                HFRCOEM23_IRQHandler
+                0x0800092e                sl_app_properties
+                0x0800092e                BURTC_IRQHandler
+                0x0800092e                SEMBRX_IRQHandler
+                0x0800092e                RFECA0_IRQHandler
+                0x0800092e                LFRCO_IRQHandler
+                0x0800092e                ACMP0_IRQHandler
+                0x0800092e                USART0_RX_IRQHandler
+                0x0800092e                MemManage_Handler
+                0x0800092e                SVC_Handler
+                0x0800092e                EUSART2_RX_IRQHandler
+                0x0800092e                SMU_S_PRIVILEGED_IRQHandler
+                0x0800092e                SW1_IRQHandler
+                0x0800092e                CMU_IRQHandler
+                0x0800092e                EUSART0_RX_IRQHandler
+                0x0800092e                RAC_RSM_IRQHandler
+                0x0800092e                SETAMPERHOST_IRQHandler
+                0x0800092e                LESENSE_IRQHandler
+                0x0800092e                GPIO_ODD_IRQHandler
+                0x0800092e                AES_IRQHandler
+                0x0800092e                M33CTI0_IRQHandler
+                0x0800092e                ICACHE0_IRQHandler
+                0x0800092e                SMU_NS_PRIVILEGED_IRQHandler
+                0x0800092e                FPUEXH_IRQHandler
+                0x0800092e                PROTIMER_IRQHandler
+                0x0800092e                ACMP1_IRQHandler
+                0x0800092e                BusFault_Handler
+                0x0800092e                MPAHBRAM_IRQHandler
+                0x0800092e                SYSRTC_APP_IRQHandler
+ .text          0x0800094c       0x38 /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+                0x0800094c                __gnu_cmse_nonsecure_call
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -647,20 +647,20 @@ LOAD /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x
  *(.rodata*)
  *(.eh_frame*)
 
-.glue_7         0x0800096c        0x0
- .glue_7        0x0800096c        0x0 linker stubs
+.glue_7         0x08000984        0x0
+ .glue_7        0x08000984        0x0 linker stubs
 
-.glue_7t        0x0800096c        0x0
- .glue_7t       0x0800096c        0x0 linker stubs
+.glue_7t        0x08000984        0x0
+ .glue_7t       0x08000984        0x0 linker stubs
 
-.vfp11_veneer   0x0800096c        0x0
- .vfp11_veneer  0x0800096c        0x0 linker stubs
+.vfp11_veneer   0x08000984        0x0
+ .vfp11_veneer  0x08000984        0x0 linker stubs
 
-.v4_bx          0x0800096c        0x0
- .v4_bx         0x0800096c        0x0 linker stubs
+.v4_bx          0x08000984        0x0
+ .v4_bx         0x08000984        0x0 linker stubs
 
-.iplt           0x0800096c        0x0
- .iplt          0x0800096c        0x0 build/secure/main_s.o
+.iplt           0x08000984        0x0
+ .iplt          0x08000984        0x0 build/secure/main_s.o
 
 .gnu.sgstubs    0x0801f800       0x20
                 0x0801f800                        . = ALIGN (0x20)
@@ -676,30 +676,30 @@ LOAD /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x
  *(.ARM.extab* .gnu.linkonce.armextab.*)
                 0x0801f820                        __exidx_start = .
 
-.ARM.exidx      0x0800096c       0x10
+.ARM.exidx      0x08000984       0x10
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0800096c       0x10 build/secure/startup_efr32fg23_s.o
+ .ARM.exidx     0x08000984       0x10 build/secure/startup_efr32fg23_s.o
                                  0x18 (size before relaxing)
-                0x0800097c                        __exidx_end = .
+                0x08000994                        __exidx_end = .
 
-.rel.dyn        0x0800097c        0x0
- .rel.iplt      0x0800097c        0x0 build/secure/main_s.o
+.rel.dyn        0x08000994        0x0
+ .rel.iplt      0x08000994        0x0 build/secure/main_s.o
 
-.copy.table     0x0800097c        0xc
-                0x0800097c                        . = ALIGN (0x4)
-                0x0800097c                        __copy_table_start__ = .
-                0x0800097c        0x4 LONG 0x8000988 __etext
-                0x08000980        0x4 LONG 0x20000000 __data_start__
-                0x08000984        0x4 LONG 0x0 ((__data_end__ - __data_start__) / 0x4)
-                0x08000988                        __copy_table_end__ = .
+.copy.table     0x08000994        0xc
+                0x08000994                        . = ALIGN (0x4)
+                0x08000994                        __copy_table_start__ = .
+                0x08000994        0x4 LONG 0x80009a0 __etext
+                0x08000998        0x4 LONG 0x20000000 __data_start__
+                0x0800099c        0x4 LONG 0x0 ((__data_end__ - __data_start__) / 0x4)
+                0x080009a0                        __copy_table_end__ = .
 
-.zero.table     0x08000988        0x0
-                0x08000988                        . = ALIGN (0x4)
-                0x08000988                        __zero_table_start__ = .
-                0x08000988                        __zero_table_end__ = .
-                0x08000988                        __etext = ALIGN (0x4)
+.zero.table     0x080009a0        0x0
+                0x080009a0                        . = ALIGN (0x4)
+                0x080009a0                        __zero_table_start__ = .
+                0x080009a0                        __zero_table_end__ = .
+                0x080009a0                        __etext = ALIGN (0x4)
 
-.data           0x20000000        0x0 load address 0x08000988
+.data           0x20000000        0x0 load address 0x080009a0
                 0x20000000                        __data_start__ = .
  *(vtable)
  *(.data*)
@@ -746,9 +746,17 @@ LOAD /home/ermenal/_thesis_tools/arm_gnu_toolchain/arm-gnu-toolchain-14.3.rel1-x
  .heap          0x20000000      0xc00 build/secure/startup_efr32fg23_s.o
                 0x20000c00                        __HeapLimit = .
 
+.stackseal      0x20000000        0x8
+                0x20000000                        . = ALIGN (0x8)
+                0x20000000                        __StackSeal = .
+                0x20000008                        . = (. + 0x8)
+ *fill*         0x20000000        0x8 
+                0x20000008                        . = ALIGN (0x8)
+
 .stack_dummy    0x20000000      0x400
  *(.stack*)
  .stack         0x20000000      0x400 build/secure/startup_efr32fg23_s.o
+ *(.stackseal*)
                 0x20008000                        __StackTop = (ORIGIN (RAM_S) + LENGTH (RAM_S))
                 0x20007c00                        __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 [!provide]                        PROVIDE (__stack = __StackTop)
@@ -871,13 +879,13 @@ LOAD linker stubs
  .debug_macro   0x00027247      0x2ab build/secure/secure_led.o
  .debug_macro   0x000274f2      0x2ed build/secure/system_efr32fg23_s.o
 
-.debug_line     0x00000000     0x2146
+.debug_line     0x00000000     0x214e
  .debug_line    0x00000000       0x49 build/secure/aeabi_dummy.o
  .debug_line    0x00000049      0x7c8 build/secure/main_s.o
  .debug_line    0x00000811      0x781 build/secure/secure_api.o
  .debug_line    0x00000f92      0x779 build/secure/secure_led.o
  .debug_line    0x0000170b      0x9c4 build/secure/system_efr32fg23_s.o
- .debug_line    0x000020cf       0x77 build/secure/startup_efr32fg23_s.o
+ .debug_line    0x000020cf       0x7f build/secure/startup_efr32fg23_s.o
 
 .debug_str      0x00000000    0xffe11
  .debug_str     0x00000000    0xffe11 build/secure/aeabi_dummy.o

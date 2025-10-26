@@ -11,7 +11,7 @@ int main_ns(void)
 {
   while(1)
   {
-    Secure_ToggleLED();
+    //Secure_ToggleLED();
     delay(50000);
   }
 }

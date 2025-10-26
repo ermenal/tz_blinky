@@ -79,122 +79,26 @@
                 #endif
                 #endif // SL_TRUSTZONE_SECURE
 
-                .section .vectors
-                .align   2
-                .globl   __Vectors
-                .globl   __Vectors_End
-                .globl   __Vectors_Size
-__Vectors:
-                .long    __INITIAL_SP                       /*     Initial Stack Pointer */
-                .long    Reset_Handler                      /*     Reset Handler */
-                .long    NMI_Handler                        /* -14 NMI Handler */
-                .long    HardFault_Handler                  /* -13 Hard Fault Handler */
-                .long    MemManage_Handler                  /* -12 MPU Fault Handler */
-                .long    BusFault_Handler                   /* -11 Bus Fault Handler */
-                .long    UsageFault_Handler                 /* -10 Usage Fault Handler */
-                .long    SecureFault_Handler                /* -9  Secure Fault Handler */
-                .long    Default_Handler                    /*     Reserved */
-                .long    Default_Handler                    /*     Reserved */
-                .long    Default_Handler                    /*     Reserved */
-                .long    SVC_Handler                        /*  -5 SVC Handler */
-                .long    DebugMon_Handler                   /*  -4 Debug Monitor Handler */
-                .long    sl_app_properties                  /*     Application properties */
-                .long    PendSV_Handler                     /*  -2 PendSV Handler */
-                .long    SysTick_Handler                    /*  -1 SysTick Handler */
+.section .vectors_ns, "a", %progbits
+.align 2
+.globl vectors_ns
+__Vectors_ns:
+  .long   __StackTop      /* Top of Non-Secure Stack */
+  .long   Reset_HandlerNS   /* Non-Secure Reset Handler */
+.space (478 * 4)
 
-    /* External interrupts */
-                .long    SMU_SECURE_IRQHandler   /* 0 - SMU_SECURE */
-                .long    SMU_S_PRIVILEGED_IRQHandler /* 1 - SMU_S_PRIVILEGED */
-                .long    SMU_NS_PRIVILEGED_IRQHandler /* 2 - SMU_NS_PRIVILEGED */
-                .long    EMU_IRQHandler          /* 3 - EMU */
-                .long    TIMER0_IRQHandler       /* 4 - TIMER0 */
-                .long    TIMER1_IRQHandler       /* 5 - TIMER1 */
-                .long    TIMER2_IRQHandler       /* 6 - TIMER2 */
-                .long    TIMER3_IRQHandler       /* 7 - TIMER3 */
-                .long    TIMER4_IRQHandler       /* 8 - TIMER4 */
-                .long    USART0_RX_IRQHandler    /* 9 - USART0_RX */
-                .long    USART0_TX_IRQHandler    /* 10 - USART0_TX */
-                .long    EUSART0_RX_IRQHandler   /* 11 - EUSART0_RX */
-                .long    EUSART0_TX_IRQHandler   /* 12 - EUSART0_TX */
-                .long    EUSART1_RX_IRQHandler   /* 13 - EUSART1_RX */
-                .long    EUSART1_TX_IRQHandler   /* 14 - EUSART1_TX */
-                .long    EUSART2_RX_IRQHandler   /* 15 - EUSART2_RX */
-                .long    EUSART2_TX_IRQHandler   /* 16 - EUSART2_TX */
-                .long    ICACHE0_IRQHandler      /* 17 - ICACHE0 */
-                .long    BURTC_IRQHandler        /* 18 - BURTC */
-                .long    LETIMER0_IRQHandler     /* 19 - LETIMER0 */
-                .long    SYSCFG_IRQHandler       /* 20 - SYSCFG */
-                .long    MPAHBRAM_IRQHandler     /* 21 - MPAHBRAM */
-                .long    LDMA_IRQHandler         /* 22 - LDMA */
-                .long    LFXO_IRQHandler         /* 23 - LFXO */
-                .long    LFRCO_IRQHandler        /* 24 - LFRCO */
-                .long    ULFRCO_IRQHandler       /* 25 - ULFRCO */
-                .long    GPIO_ODD_IRQHandler     /* 26 - GPIO_ODD */
-                .long    GPIO_EVEN_IRQHandler    /* 27 - GPIO_EVEN */
-                .long    I2C0_IRQHandler         /* 28 - I2C0 */
-                .long    I2C1_IRQHandler         /* 29 - I2C1 */
-                .long    EMUDG_IRQHandler        /* 30 - EMUDG */
-                .long    AGC_IRQHandler          /* 31 - AGC */
-                .long    BUFC_IRQHandler         /* 32 - BUFC */
-                .long    FRC_PRI_IRQHandler      /* 33 - FRC_PRI */
-                .long    FRC_IRQHandler          /* 34 - FRC */
-                .long    MODEM_IRQHandler        /* 35 - MODEM */
-                .long    PROTIMER_IRQHandler     /* 36 - PROTIMER */
-                .long    RAC_RSM_IRQHandler      /* 37 - RAC_RSM */
-                .long    RAC_SEQ_IRQHandler      /* 38 - RAC_SEQ */
-                .long    HOSTMAILBOX_IRQHandler  /* 39 - HOSTMAILBOX */
-                .long    SYNTH_IRQHandler        /* 40 - SYNTH */
-                .long    ACMP0_IRQHandler        /* 41 - ACMP0 */
-                .long    ACMP1_IRQHandler        /* 42 - ACMP1 */
-                .long    WDOG0_IRQHandler        /* 43 - WDOG0 */
-                .long    WDOG1_IRQHandler        /* 44 - WDOG1 */
-                .long    HFXO0_IRQHandler        /* 45 - HFXO0 */
-                .long    HFRCO0_IRQHandler       /* 46 - HFRCO0 */
-                .long    HFRCOEM23_IRQHandler    /* 47 - HFRCOEM23 */
-                .long    CMU_IRQHandler          /* 48 - CMU */
-                .long    AES_IRQHandler          /* 49 - AES */
-                .long    IADC_IRQHandler         /* 50 - IADC */
-                .long    MSC_IRQHandler          /* 51 - MSC */
-                .long    DPLL0_IRQHandler        /* 52 - DPLL0 */
-                .long    EMUEFP_IRQHandler       /* 53 - EMUEFP */
-                .long    DCDC_IRQHandler         /* 54 - DCDC */
-                .long    VDAC_IRQHandler         /* 55 - VDAC */
-                .long    PCNT0_IRQHandler        /* 56 - PCNT0 */
-                .long    SW0_IRQHandler          /* 57 - SW0 */
-                .long    SW1_IRQHandler          /* 58 - SW1 */
-                .long    SW2_IRQHandler          /* 59 - SW2 */
-                .long    SW3_IRQHandler          /* 60 - SW3 */
-                .long    KERNEL0_IRQHandler      /* 61 - KERNEL0 */
-                .long    KERNEL1_IRQHandler      /* 62 - KERNEL1 */
-                .long    M33CTI0_IRQHandler      /* 63 - M33CTI0 */
-                .long    M33CTI1_IRQHandler      /* 64 - M33CTI1 */
-                .long    FPUEXH_IRQHandler       /* 65 - FPUEXH */
-                .long    SETAMPERHOST_IRQHandler /* 66 - SETAMPERHOST */
-                .long    SEMBRX_IRQHandler       /* 67 - SEMBRX */
-                .long    SEMBTX_IRQHandler       /* 68 - SEMBTX */
-                .long    LESENSE_IRQHandler      /* 69 - LESENSE */
-                .long    SYSRTC_APP_IRQHandler   /* 70 - SYSRTC_APP */
-                .long    SYSRTC_SEQ_IRQHandler   /* 71 - SYSRTC_SEQ */
-                .long    LCD_IRQHandler          /* 72 - LCD */
-                .long    KEYSCAN_IRQHandler      /* 73 - KEYSCAN */
-                .long    RFECA0_IRQHandler       /* 74 - RFECA0 */
-                .long    RFECA1_IRQHandler       /* 75 - RFECA1 */
+__Vectors_ns_End:
+                .equ     __Vectors_ns_Size, __Vectors_ns_End - __Vectors_ns
+                .size    __Vectors_ns, . - __Vectors_ns
 
-/* calculate the empty space according the used Cortex-Core */
-                .space   (404 * 4)  /* Interrupts 76 .. 480 are left out */
-__Vectors_End:
-                .equ     __Vectors_Size, __Vectors_End - __Vectors
-                .size    __Vectors, . - __Vectors
-
-                .thumb
                 .section .text
                 .align   2
 
                 .thumb_func
-                .type    Reset_Handler, %function
-                .globl   Reset_Handler
+                .type    Reset_HandlerNS, %function
+                .globl   Reset_HandlerNS
                 .fnstart
-Reset_Handler:
+Reset_HandlerNS:
                 #if defined (SL_TRUSTZONE_SECURE)
                 ldr      r0, =__STACK_LIMIT
                 msr      msplim, r0
@@ -253,122 +157,9 @@ Reset_Handler:
                 bl      main_ns
 
                 .fnend
-                .size    Reset_Handler, . - Reset_Handler
+                .size    Reset_HandlerNS, . - Reset_HandlerNS
 /* The default macro is not used for HardFault_Handler
  * because this results in a poor debug illusion.
  */
-                .thumb_func
-                .type    HardFault_Handler, %function
-                .weak    HardFault_Handler
-                .fnstart
-HardFault_Handler:
-                b        .
-                .fnend
-                .size    HardFault_Handler, . - HardFault_Handler
-
-                .thumb_func
-                .type    Default_Handler, %function
-                .weak    Default_Handler
-                .fnstart
-Default_Handler:
-// Default Handler gedrag = niks doen? Overschreven in code? 
-                b        .
-                .fnend
-                .size    Default_Handler, . - Default_Handler
-
-/* Macro to define default exception/interrupt handlers.
- * Default handler are weak symbols with an endless loop.
- * They can be overwritten by real handlers.
- */
-                .macro   Set_Default_Handler  Handler_Name
-                .weak    \Handler_Name
-                .set     \Handler_Name, Default_Handler
-                .endm
-                Set_Default_Handler  NMI_Handler
-                Set_Default_Handler  MemManage_Handler
-                Set_Default_Handler  BusFault_Handler
-                Set_Default_Handler  UsageFault_Handler
-                Set_Default_Handler  SecureFault_Handler
-                Set_Default_Handler  SVC_Handler
-                Set_Default_Handler  DebugMon_Handler
-                Set_Default_Handler  sl_app_properties
-                Set_Default_Handler  PendSV_Handler
-                Set_Default_Handler  SysTick_Handler
-                Set_Default_Handler  SMU_SECURE_IRQHandler
-                Set_Default_Handler  SMU_S_PRIVILEGED_IRQHandler
-                Set_Default_Handler  SMU_NS_PRIVILEGED_IRQHandler
-                Set_Default_Handler  EMU_IRQHandler
-                Set_Default_Handler  TIMER0_IRQHandler
-                Set_Default_Handler  TIMER1_IRQHandler
-                Set_Default_Handler  TIMER2_IRQHandler
-                Set_Default_Handler  TIMER3_IRQHandler
-                Set_Default_Handler  TIMER4_IRQHandler
-                Set_Default_Handler  USART0_RX_IRQHandler
-                Set_Default_Handler  USART0_TX_IRQHandler
-                Set_Default_Handler  EUSART0_RX_IRQHandler
-                Set_Default_Handler  EUSART0_TX_IRQHandler
-                Set_Default_Handler  EUSART1_RX_IRQHandler
-                Set_Default_Handler  EUSART1_TX_IRQHandler
-                Set_Default_Handler  EUSART2_RX_IRQHandler
-                Set_Default_Handler  EUSART2_TX_IRQHandler
-                Set_Default_Handler  ICACHE0_IRQHandler
-                Set_Default_Handler  BURTC_IRQHandler
-                Set_Default_Handler  LETIMER0_IRQHandler
-                Set_Default_Handler  SYSCFG_IRQHandler
-                Set_Default_Handler  MPAHBRAM_IRQHandler
-                Set_Default_Handler  LDMA_IRQHandler
-                Set_Default_Handler  LFXO_IRQHandler
-                Set_Default_Handler  LFRCO_IRQHandler
-                Set_Default_Handler  ULFRCO_IRQHandler
-                Set_Default_Handler  GPIO_ODD_IRQHandler
-                Set_Default_Handler  GPIO_EVEN_IRQHandler
-                Set_Default_Handler  I2C0_IRQHandler
-                Set_Default_Handler  I2C1_IRQHandler
-                Set_Default_Handler  EMUDG_IRQHandler
-                Set_Default_Handler  AGC_IRQHandler
-                Set_Default_Handler  BUFC_IRQHandler
-                Set_Default_Handler  FRC_PRI_IRQHandler
-                Set_Default_Handler  FRC_IRQHandler
-                Set_Default_Handler  MODEM_IRQHandler
-                Set_Default_Handler  PROTIMER_IRQHandler
-                Set_Default_Handler  RAC_RSM_IRQHandler
-                Set_Default_Handler  RAC_SEQ_IRQHandler
-                Set_Default_Handler  HOSTMAILBOX_IRQHandler
-                Set_Default_Handler  SYNTH_IRQHandler
-                Set_Default_Handler  ACMP0_IRQHandler
-                Set_Default_Handler  ACMP1_IRQHandler
-                Set_Default_Handler  WDOG0_IRQHandler
-                Set_Default_Handler  WDOG1_IRQHandler
-                Set_Default_Handler  HFXO0_IRQHandler
-                Set_Default_Handler  HFRCO0_IRQHandler
-                Set_Default_Handler  HFRCOEM23_IRQHandler
-                Set_Default_Handler  CMU_IRQHandler
-                Set_Default_Handler  AES_IRQHandler
-                Set_Default_Handler  IADC_IRQHandler
-                Set_Default_Handler  MSC_IRQHandler
-                Set_Default_Handler  DPLL0_IRQHandler
-                Set_Default_Handler  EMUEFP_IRQHandler
-                Set_Default_Handler  DCDC_IRQHandler
-                Set_Default_Handler  VDAC_IRQHandler
-                Set_Default_Handler  PCNT0_IRQHandler
-                Set_Default_Handler  SW0_IRQHandler
-                Set_Default_Handler  SW1_IRQHandler
-                Set_Default_Handler  SW2_IRQHandler
-                Set_Default_Handler  SW3_IRQHandler
-                Set_Default_Handler  KERNEL0_IRQHandler
-                Set_Default_Handler  KERNEL1_IRQHandler
-                Set_Default_Handler  M33CTI0_IRQHandler
-                Set_Default_Handler  M33CTI1_IRQHandler
-                Set_Default_Handler  FPUEXH_IRQHandler
-                Set_Default_Handler  SETAMPERHOST_IRQHandler
-                Set_Default_Handler  SEMBRX_IRQHandler
-                Set_Default_Handler  SEMBTX_IRQHandler
-                Set_Default_Handler  LESENSE_IRQHandler
-                Set_Default_Handler  SYSRTC_APP_IRQHandler
-                Set_Default_Handler  SYSRTC_SEQ_IRQHandler
-                Set_Default_Handler  LCD_IRQHandler
-                Set_Default_Handler  KEYSCAN_IRQHandler
-                Set_Default_Handler  RFECA0_IRQHandler
-                Set_Default_Handler  RFECA1_IRQHandler
 
                 .end

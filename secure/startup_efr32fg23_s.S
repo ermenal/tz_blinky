@@ -72,12 +72,12 @@
                 .size       __HeapLimit, . - __HeapLimit
 
 #define __INITIAL_SP     __StackTop
-                #if defined(SL_TRUSTZONE_SECURE)
+      //          #if defined(SL_TRUSTZONE_SECURE)
 #define __STACK_LIMIT    __StackLimit
-                #if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
+      //          #if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
 #define __STACK_SEAL     __StackSeal
-                #endif
-                #endif // SL_TRUSTZONE_SECURE
+            //    #endif
+            //    #endif // SL_TRUSTZONE_SECURE
 
                 .section .vectors
                 .align   2
@@ -195,16 +195,13 @@ __Vectors_End:
                 .globl   Reset_Handler
                 .fnstart
 Reset_Handler:
-                #if defined (SL_TRUSTZONE_SECURE)
+
                 ldr      r0, =__STACK_LIMIT
                 msr      msplim, r0
 
-                #if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
                 ldr      r0, =__STACK_SEAL
                 ldr      r1, =0xFEF5EDA5U
                 strd     r1,r1,[r0,#0]
-                #endif
-                #endif // SL_TRUSTZONE_SECURE
 
                 bl       SystemInit
 

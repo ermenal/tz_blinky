@@ -259,15 +259,15 @@ SECTIONS
      to use ARMv8-M stack sealing uncomment '.stackseal' section and KEEP(*(.stackseal*))
      in .stack_dummy section
    */
-/*
+
   .stackseal (COPY) :
   {
     . = ALIGN(8);
     __StackSeal = .;
     . = . + 8;
     . = ALIGN(8);
-  } > RAM
-*/
+  } > RAM_S
+
 
   /* .stack_dummy section doesn't contains any symbols. It is only
    * used for linker to calculate size of stack sections, and assign
@@ -275,7 +275,7 @@ SECTIONS
   .stack_dummy (COPY):
   {
     KEEP(*(.stack*))
- /* KEEP(*(.stackseal*))*/
+    KEEP(*(.stackseal*))
   } > RAM_S
 
   /* Set stack top to end of RAM, and stack limit move down by

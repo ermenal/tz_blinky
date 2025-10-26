@@ -37,7 +37,7 @@ MEMORY
   RAM_NS   (rwx) : ORIGIN = 0x20008000, LENGTH = 32K
 }
 
-ENTRY(Reset_Handler)
+ENTRY(Reset_HandlerNS)
 
 
 /* Linker script to place sections and symbol values. Should be used together
@@ -77,7 +77,7 @@ SECTIONS
 {
   .text :
   {
-    KEEP(*(.vectors))
+    KEEP(*(.vectors_ns))
     *(.text*)
 
     KEEP(*(.init))
