@@ -99,6 +99,7 @@ __Vectors_ns_End:
                 .globl   Reset_HandlerNS
                 .fnstart
 Reset_HandlerNS:
+/*
                 #if defined (SL_TRUSTZONE_SECURE)
                 ldr      r0, =__STACK_LIMIT
                 msr      msplim, r0
@@ -111,7 +112,7 @@ Reset_HandlerNS:
                 #endif // SL_TRUSTZONE_SECURE
 
                 //bl       SystemInit
-
+*/
                 ldr      r4, =__copy_table_start__
                 ldr      r5, =__copy_table_end__
 
