@@ -24,6 +24,7 @@ SECTIONS
 .text :
   {
   . = ALIGN(4);
+    /*KEEP(*(.isr_vector_ns)) /* Startup code */
     *(.text*)
     *(.rodata*)
   . = ALIGN(4);
@@ -37,17 +38,34 @@ __exidx_start_ns =.;
   } >FLASH_NS
 __exidx_end_ns =.;
 
-  __etext_ns =.;    /* define a global symbol at end of code */
+__etext_ns = .;    /* define a global symbol at end of code */
+
+/* .copy.table :
+/*   {
+/*   . = ALIGN(4);
+/*   __copy_table_start_ns__ =.;
+/*   LONG (__etext_ns)
+/*   LONG (__data_start_ns__)
+/*   LONG ((__data_end_ns__ - __data_start_ns__) / 4)
+/*   __copy_table_end_ns__ =.;
+/*   } > FLASH_NS
+/* 
+/* .zero.table :
+/*   {
+/*   . = ALIGN(4);
+/*   __zero_table_start_ns__ =.;
+/*   LONG (__bss_start_ns__)
+/*   LONG (__bss_end_ns__)
+/*   __zero_table_end_ns__ =.;
+/*   } > FLASH_NS
 
   /* Initialized data sections goes into RAM, load LMA copy after code */
 .data :
   {
-  . = ALIGN(4);
-    __data_start_ns__ =.;   /* create a global symbol at data start */
-    *(.data*)           /*.data sections */
-    *(.data.*)          /*.data* sections */
-  . = ALIGN(4);
-    __data_end_ns__ =.;   /* define a global symbol at data end */
+  __data_start_ns__ =.;   /* create a global symbol at data start */
+  *(.data*)           /*.data sections */
+  *(.data.*)          /*.data* sections */
+  __data_end_ns__ =.;   /* define a global symbol at data end */
   } >RAM_NS AT> FLASH_NS
 
   /* Uninitialized data section */

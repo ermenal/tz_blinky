@@ -24,7 +24,7 @@ __isr_vector_ns:
 .long   __StackTop_NS         /* Top of Non-Secure Stack */
 .long   Reset_Handler_NS      /* Non-Secure Reset Handler */
 
-.text
+.section .text
 .thumb
 .thumb_func
 .align 2
