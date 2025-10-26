@@ -2,13 +2,13 @@
  * Linker script for the non-secure application
  */
 
-ENTRY(Reset_Handler_NS)
-
 MEMORY
 {
   FLASH_NS (rx)  : ORIGIN = 0x08020000, LENGTH = 384K
   RAM_NS   (rwx) : ORIGIN = 0x20008000, LENGTH = 32K
 }
+
+ENTRY(Reset_Handler_ns)
 
 SECTIONS
 {
