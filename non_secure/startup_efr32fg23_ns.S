@@ -5,25 +5,24 @@
 .arch armv8-m.main
 
 /* Non-Secure Stack */
-.section .stack, "w", %progbits
+.section .stack_ns, "w", %progbits
 .align 3
-.equ    Stack_Size, 2048
-.globl  __StackTop
-.globl  __StackLimit
-__StackLimit:
- .space  Stack_Size
- .size   __StackLimit,. - __StackLimit
-__StackTop:
- .size .stack,. -.stack
+.equ    Stack_Size_NS, 2048
+.globl  __StackTop_NS
+.globl  __StackLimit_NS
+__StackLimit_NS:
+.space  Stack_Size_NS
+.size   __StackLimit_NS,. - __StackLimit_NS
+__StackTop_NS:
+.size .stack_ns,. -.stack_ns
 
 /* Non-Secure Vector Table */
-.section .isr_vector, "a", %progbits
+.section .isr_vector_ns, "a", %progbits
 .align 2
-.globl __isr_vector
-__isr_vector:
- .long   __StackTop         /* Top of Non-Secure Stack */
- .long   Reset_Handler_NS      /* Non-Secure Reset Handler */
-  /* Add other non-secure interrupt handlers here if needed */
+.globl __isr_vector_ns
+__isr_vector_ns:
+.long   __StackTop_NS         /* Top of Non-Secure Stack */
+.long   Reset_Handler_NS      /* Non-Secure Reset Handler */
 
 .text
 .thumb
@@ -38,32 +37,32 @@ Reset_Handler_NS:
    */
 
   /* Copy data from Flash to RAM */
-  ldr   r1, =_etext
-  ldr   r2, =_sdata
-  ldr   r3, =_edata
+  ldr   r1, =__etext_ns
+  ldr   r2, =__data_start_ns__
+  ldr   r3, =__data_end_ns__
   subs  r3, r2
-  ble  .L_zero_bss
+  ble .L_zero_bss_ns
 
-.L_copy_data:
+.L_copy_data_ns:
   subs  r3, 4
   ldr   r0, [r1, r3]
   str   r0, [r2, r3]
-  bgt  .L_copy_data
+  bgt .L_copy_data_ns
 
-.L_zero_bss:
+.L_zero_bss_ns:
   /* Zero out the.bss section */
-  ldr   r2, =_sbss
-  ldr   r3, =_ebss
+  ldr   r2, =__bss_start_ns__
+  ldr   r3, =__bss_end_ns__
   subs  r3, r2
-  ble  .L_call_main
+  ble .L_call_main_ns
 
   movs  r0, 0
-.L_zero_loop:
+.L_zero_loop_ns:
   subs  r3, 4
   str   r0, [r2, r3]
-  bgt  .L_zero_loop
+  bgt .L_zero_loop_ns
 
-.L_call_main:
+.L_call_main_ns:
   /* Call non-secure main */
   bl    main_ns
 

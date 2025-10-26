@@ -2,7 +2,7 @@
  * Linker script for the non-secure application
  */
 
-ENTRY(Reset_Handler)
+ENTRY(Reset_Handler_NS)
 
 MEMORY
 {
@@ -12,47 +12,59 @@ MEMORY
 
 SECTIONS
 {
- .text :
+  /* The startup code goes first into FLASH */
+.isr_vector_ns :
   {
-   . = ALIGN(4);
-    KEEP(*(.isr_vector)) /* CRITICAL: Keep the vector table, the entry point */
+  . = ALIGN(4);
+    KEEP(*(.isr_vector_ns)) /* Startup code */
+  . = ALIGN(4);
+  } >FLASH_NS
+
+  /* The program code and other data goes into FLASH */
+.text :
+  {
+  . = ALIGN(4);
     *(.text*)
     *(.rodata*)
-   . = ALIGN(4);
-  } > FLASH_NS
+  . = ALIGN(4);
+  } >FLASH_NS
 
-  /* End of code section symbol, used by the startup file to find initialized data */
-  _etext =.;
-
- .data :
+.ARM.extab   : { *(.ARM.extab*.gnu.linkonce.armextab.*) } >FLASH_NS
+__exidx_start_ns =.;
+.ARM.exidx   :
   {
-   . = ALIGN(4);
-    _sdata =.;        /* Create a symbol for the start of.data */
-    *(.data*)
-   . = ALIGN(4);
-    _edata =.;        /* Create a symbol for the end of.data */
-  } > RAM_NS AT> FLASH_NS
+    *(.ARM.exidx*.gnu.linkonce.armexidx.*)
+  } >FLASH_NS
+__exidx_end_ns =.;
 
- .bss :
+  __etext_ns =.;    /* define a global symbol at end of code */
+
+  /* Initialized data sections goes into RAM, load LMA copy after code */
+.data :
   {
-   . = ALIGN(4);
-    _sbss =.;         /* Create a symbol for the start of.bss */
-    __bss_start__ = _sbss; /* Alias for some startup codes */
+  . = ALIGN(4);
+    __data_start_ns__ =.;   /* create a global symbol at data start */
+    *(.data*)           /*.data sections */
+    *(.data.*)          /*.data* sections */
+  . = ALIGN(4);
+    __data_end_ns__ =.;   /* define a global symbol at data end */
+  } >RAM_NS AT> FLASH_NS
+
+  /* Uninitialized data section */
+.bss :
+  {
+  . = ALIGN(4);
+    __bss_start_ns__ =.;
     *(.bss*)
     *(COMMON)
-   . = ALIGN(4);
-    _ebss =.;         /* Create a symbol for the end of.bss */
-    __bss_end__ = _ebss; /* Alias */
-  } > RAM_NS
+  . = ALIGN(4);
+    __bss_end_ns__ =.;
+  } >RAM_NS
 
-  /* Define symbols for heap start. This must be done *before* the NOLOAD stack section. */
- . = ALIGN(8);
-  PROVIDE(end =.);
-  PROVIDE(_end =.);
-
-  /* Define a section for the non-secure stack */
- ._user_stack (NOLOAD):
+._user_stack_ns (NOLOAD):
   {
-    KEEP(*(.stack))
-  } > RAM_NS
+  . = ALIGN(8);
+    KEEP(*(.stack_ns))
+  . = ALIGN(8);
+  } >RAM_NS
 }
