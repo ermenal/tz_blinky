@@ -1,171 +1,266 @@
+/**************************************************************************//**
+ * @file     startup_efr32fg23.S
+ * @brief    CMSIS-Core(M) Device Startup File for
+ *           Device EFR32FG23
+ *           Device EFR32FG23
+ * @version  V2.3.0
+ * @date     26. May 2021
+ ******************************************************************************
+ ******************************************************************************
+ * # License
+ *
+ * The licensor of this software is Silicon Laboratories Inc. Your use of this
+ * software is governed by the terms of Silicon Labs Master Software License
+ * Agreement (MSLA) available at
+ * www.silabs.com/about-us/legal/master-software-license-agreement. This
+ * software is Third Party Software licensed by Silicon Labs from a third party
+ * and is governed by the sections of the MSLA applicable to Third Party
+ * Software and the additional terms set forth below.
+ *
+ *****************************************************************************/
+/*
+ * Copyright (c) 2009-2021 Arm Limited. All rights reserved.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 (the License); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
                 .syntax  unified
                 .arch    armv8-m.main
 
-// stack_ns sectie begint
-                .section    .stack_ns
+                .section    .stack
                 .align      9
-// Bepaal stack_ns size (meegegeven of kies zelf 0x00000400)
                 #ifdef __STACK_SIZE
-                .equ        Stack_ns_Size, __STACK_SIZE
+                .equ        Stack_Size, __STACK_SIZE
                 #else
-                .equ        Stack_ns_Size, 0x00000400
+                .equ        Stack_Size, 0x00000400
                 #endif
-// Def globals (__StackTopNS en __StackLimitNS zijn bruikbaar buiten deze file) 
-                .globl      __StackTopNS
-                .globl      __StackLimitNS
-                __StackLimitNS:
-// Bewaar __Stack_ns_Size plaats om later in te vullen met stack
-                .space      Stack_ns_Size
-                .size       __StackLimitNS, . - __StackLimitNS
-// Zet stack zn size als Top - StackLimit - alignment (stack groeit naar beneden in M33)
- __StackTopNS:
-                .size       __StackTopNS, . - __StackTopNS
+                .globl      __StackTop
+                .globl      __StackLimit
+                __StackLimit:
+                .space      Stack_Size
+                .size       __StackLimit, . - __StackLimit
+ __StackTop:
+                .size       __StackTop, . - __StackTop
 
-// heap_ns sectie begint, similar als stack
-                .section    .heap_ns
+                .section    .heap
                 .align      3
                 #ifdef __HEAP_SIZE
-                .equ        Heap_SizeNS, __HEAP_SIZE
+                .equ        Heap_Size, __HEAP_SIZE
                 #else
-                .equ        Heap_SizeNS, 0x00000C00
+                .equ        Heap_Size, 0x00000C00
                 #endif
-                .globl      __HeapBaseNS
-                .globl      __HeapLimitNS
- __HeapBaseNS:
-                .if Heap_SizeNS // ahhh als we __HEAP_SIZE = 0 meegeven
-                .space      Heap_SizeNS
+                .globl      __HeapBase
+                .globl      __HeapLimit
+ __HeapBase:
+                .if Heap_Size
+                .space      Heap_Size
                 .endif
-                .size       __HeapBaseNS, . - __HeapBaseNS
- __HeapLimitNS:
-                .size       __HeapLimitNS, . - __HeapLimitNS
+                .size       __HeapBase, . - __HeapBase
+ __HeapLimit:
+                .size       __HeapLimit, . - __HeapLimit
 
-// Definieer waar we beginnen met NSW execution
-#define __INITIAL_SP_NS     __StackTopNS
-                #if defined(SL_TRUSTZONE_SECURE) // Niet het geval ?
-#define __STACK_LIMIT_NS    __StackLimitNS
+#define __INITIAL_SP     __StackTop
+                #if defined(SL_TRUSTZONE_SECURE)
+#define __STACK_LIMIT    __StackLimit
                 #if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
-#define __STACK_SEAL_NS     __StackSeal // Wel het geval? 
+#define __STACK_SEAL     __StackSeal
                 #endif
                 #endif // SL_TRUSTZONE_SECURE
 
-// Begin vectors_ns sectie. 
-// Ik doe enkel initial sp en reset handler voorlopig
-                .section .vectors_ns
+                .section .vectors
                 .align   2
-                .globl   __Vectors_NS
-                .globl   __Vectors_NS_End
-                .globl   __Vectors_NS_Size
-__Vectors_NS:
-                .long    __INITIAL_SP_NS                       /*     Initial Stack Pointer */
-                .long    Reset_Handler_ns                      /*     Reset Handler */
-            /*
-                .long    NMI_Handler                        
-                .long    HardFault_Handler                  
-                .long    MemManage_Handler                  
-                .long    BusFault_Handler                   
-                .long    UsageFault_Handler                 
-                .long    SecureFault_Handler                
-                .long    Default_Handler                    
-                .long    Default_Handler                    
-                .long    Default_Handler                    
-                .long    SVC_Handler                        
-                .long    DebugMon_Handler                   
-                .long    sl_app_properties                  
-                .long    PendSV_Handler                     
-                .long    SysTick_Handler 
-             */
-             /* External interrupts komen hier, nu geen enkele */
+                .globl   __Vectors
+                .globl   __Vectors_End
+                .globl   __Vectors_Size
+__Vectors:
+                .long    __INITIAL_SP                       /*     Initial Stack Pointer */
+                .long    Reset_Handler                      /*     Reset Handler */
+                .long    NMI_Handler                        /* -14 NMI Handler */
+                .long    HardFault_Handler                  /* -13 Hard Fault Handler */
+                .long    MemManage_Handler                  /* -12 MPU Fault Handler */
+                .long    BusFault_Handler                   /* -11 Bus Fault Handler */
+                .long    UsageFault_Handler                 /* -10 Usage Fault Handler */
+                .long    SecureFault_Handler                /* -9  Secure Fault Handler */
+                .long    Default_Handler                    /*     Reserved */
+                .long    Default_Handler                    /*     Reserved */
+                .long    Default_Handler                    /*     Reserved */
+                .long    SVC_Handler                        /*  -5 SVC Handler */
+                .long    DebugMon_Handler                   /*  -4 Debug Monitor Handler */
+                .long    sl_app_properties                  /*     Application properties */
+                .long    PendSV_Handler                     /*  -2 PendSV Handler */
+                .long    SysTick_Handler                    /*  -1 SysTick Handler */
+
+    /* External interrupts */
+                .long    SMU_SECURE_IRQHandler   /* 0 - SMU_SECURE */
+                .long    SMU_S_PRIVILEGED_IRQHandler /* 1 - SMU_S_PRIVILEGED */
+                .long    SMU_NS_PRIVILEGED_IRQHandler /* 2 - SMU_NS_PRIVILEGED */
+                .long    EMU_IRQHandler          /* 3 - EMU */
+                .long    TIMER0_IRQHandler       /* 4 - TIMER0 */
+                .long    TIMER1_IRQHandler       /* 5 - TIMER1 */
+                .long    TIMER2_IRQHandler       /* 6 - TIMER2 */
+                .long    TIMER3_IRQHandler       /* 7 - TIMER3 */
+                .long    TIMER4_IRQHandler       /* 8 - TIMER4 */
+                .long    USART0_RX_IRQHandler    /* 9 - USART0_RX */
+                .long    USART0_TX_IRQHandler    /* 10 - USART0_TX */
+                .long    EUSART0_RX_IRQHandler   /* 11 - EUSART0_RX */
+                .long    EUSART0_TX_IRQHandler   /* 12 - EUSART0_TX */
+                .long    EUSART1_RX_IRQHandler   /* 13 - EUSART1_RX */
+                .long    EUSART1_TX_IRQHandler   /* 14 - EUSART1_TX */
+                .long    EUSART2_RX_IRQHandler   /* 15 - EUSART2_RX */
+                .long    EUSART2_TX_IRQHandler   /* 16 - EUSART2_TX */
+                .long    ICACHE0_IRQHandler      /* 17 - ICACHE0 */
+                .long    BURTC_IRQHandler        /* 18 - BURTC */
+                .long    LETIMER0_IRQHandler     /* 19 - LETIMER0 */
+                .long    SYSCFG_IRQHandler       /* 20 - SYSCFG */
+                .long    MPAHBRAM_IRQHandler     /* 21 - MPAHBRAM */
+                .long    LDMA_IRQHandler         /* 22 - LDMA */
+                .long    LFXO_IRQHandler         /* 23 - LFXO */
+                .long    LFRCO_IRQHandler        /* 24 - LFRCO */
+                .long    ULFRCO_IRQHandler       /* 25 - ULFRCO */
+                .long    GPIO_ODD_IRQHandler     /* 26 - GPIO_ODD */
+                .long    GPIO_EVEN_IRQHandler    /* 27 - GPIO_EVEN */
+                .long    I2C0_IRQHandler         /* 28 - I2C0 */
+                .long    I2C1_IRQHandler         /* 29 - I2C1 */
+                .long    EMUDG_IRQHandler        /* 30 - EMUDG */
+                .long    AGC_IRQHandler          /* 31 - AGC */
+                .long    BUFC_IRQHandler         /* 32 - BUFC */
+                .long    FRC_PRI_IRQHandler      /* 33 - FRC_PRI */
+                .long    FRC_IRQHandler          /* 34 - FRC */
+                .long    MODEM_IRQHandler        /* 35 - MODEM */
+                .long    PROTIMER_IRQHandler     /* 36 - PROTIMER */
+                .long    RAC_RSM_IRQHandler      /* 37 - RAC_RSM */
+                .long    RAC_SEQ_IRQHandler      /* 38 - RAC_SEQ */
+                .long    HOSTMAILBOX_IRQHandler  /* 39 - HOSTMAILBOX */
+                .long    SYNTH_IRQHandler        /* 40 - SYNTH */
+                .long    ACMP0_IRQHandler        /* 41 - ACMP0 */
+                .long    ACMP1_IRQHandler        /* 42 - ACMP1 */
+                .long    WDOG0_IRQHandler        /* 43 - WDOG0 */
+                .long    WDOG1_IRQHandler        /* 44 - WDOG1 */
+                .long    HFXO0_IRQHandler        /* 45 - HFXO0 */
+                .long    HFRCO0_IRQHandler       /* 46 - HFRCO0 */
+                .long    HFRCOEM23_IRQHandler    /* 47 - HFRCOEM23 */
+                .long    CMU_IRQHandler          /* 48 - CMU */
+                .long    AES_IRQHandler          /* 49 - AES */
+                .long    IADC_IRQHandler         /* 50 - IADC */
+                .long    MSC_IRQHandler          /* 51 - MSC */
+                .long    DPLL0_IRQHandler        /* 52 - DPLL0 */
+                .long    EMUEFP_IRQHandler       /* 53 - EMUEFP */
+                .long    DCDC_IRQHandler         /* 54 - DCDC */
+                .long    VDAC_IRQHandler         /* 55 - VDAC */
+                .long    PCNT0_IRQHandler        /* 56 - PCNT0 */
+                .long    SW0_IRQHandler          /* 57 - SW0 */
+                .long    SW1_IRQHandler          /* 58 - SW1 */
+                .long    SW2_IRQHandler          /* 59 - SW2 */
+                .long    SW3_IRQHandler          /* 60 - SW3 */
+                .long    KERNEL0_IRQHandler      /* 61 - KERNEL0 */
+                .long    KERNEL1_IRQHandler      /* 62 - KERNEL1 */
+                .long    M33CTI0_IRQHandler      /* 63 - M33CTI0 */
+                .long    M33CTI1_IRQHandler      /* 64 - M33CTI1 */
+                .long    FPUEXH_IRQHandler       /* 65 - FPUEXH */
+                .long    SETAMPERHOST_IRQHandler /* 66 - SETAMPERHOST */
+                .long    SEMBRX_IRQHandler       /* 67 - SEMBRX */
+                .long    SEMBTX_IRQHandler       /* 68 - SEMBTX */
+                .long    LESENSE_IRQHandler      /* 69 - LESENSE */
+                .long    SYSRTC_APP_IRQHandler   /* 70 - SYSRTC_APP */
+                .long    SYSRTC_SEQ_IRQHandler   /* 71 - SYSRTC_SEQ */
+                .long    LCD_IRQHandler          /* 72 - LCD */
+                .long    KEYSCAN_IRQHandler      /* 73 - KEYSCAN */
+                .long    RFECA0_IRQHandler       /* 74 - RFECA0 */
+                .long    RFECA1_IRQHandler       /* 75 - RFECA1 */
 
 /* calculate the empty space according the used Cortex-Core */
-                .space   (480 * 4)  /* Geen enkele vd 480 external interrupts gebruikt */
-                // Tbh idk hoe belangrijk deze space laten is
-__Vectors_NS_End:
-                .equ     __Vectors_NS_Size, __Vectors_NS_End - __Vectors_NS
-                .size    __Vectors_NS, . - __Vectors_NS
+                .space   (404 * 4)  /* Interrupts 76 .. 480 are left out */
+__Vectors_End:
+                .equ     __Vectors_Size, __Vectors_End - __Vectors
+                .size    __Vectors, . - __Vectors
 
-// begin .text_ns section
                 .thumb
-                .section .text_ns
+                .section .text
                 .align   2
 
-// NS Reset Handler, moet naar ns main springen
                 .thumb_func
-                .type    Reset_Handler_ns, %function
-                .globl   Reset_Handler_ns
+                .type    Reset_Handler, %function
+                .globl   Reset_Handler
                 .fnstart
-Reset_Handler_ns:
-                #if defined (SL_TRUSTZONE_SECURE) // Niet
-                ldr      r0, =__STACK_LIMIT_NS
+Reset_Handler:
+                #if defined (SL_TRUSTZONE_SECURE)
+                ldr      r0, =__STACK_LIMIT
                 msr      msplim, r0
 
                 #if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
-                ldr      r0, =__STACK_SEAL_NS // Wel ? Maar binnen secure dus niet?
+                ldr      r0, =__STACK_SEAL
                 ldr      r1, =0xFEF5EDA5U
                 strd     r1,r1,[r0,#0]
                 #endif
                 #endif // SL_TRUSTZONE_SECURE
-// SysInit al gebeurd door SW
-//                bl       SystemInit
 
-// TODO: Vind uit waar copy_table goed voor is
-                ldr      r4, =__copy_table_ns_start__
-                ldr      r5, =__copy_table_ns_end__
+                //bl       SystemInit
 
-.L_loop0_ns:
+                ldr      r4, =__copy_table_start__
+                ldr      r5, =__copy_table_end__
+
+.L_loop0:
                 cmp      r4, r5
-                bge      .L_loop0_done_ns // Alles gekopieerd, copy_table_start == copy_table_end
+                bge      .L_loop0_done
                 ldr      r1, [r4]                /* source address */
                 ldr      r2, [r4, #4]            /* destination address */
                 ldr      r3, [r4, #8]            /* word count */
                 lsls     r3, r3, #2              /* byte count */
 
-.L_loop0_0_ns:
+.L_loop0_0:
                 subs     r3, #4                  /* decrement byte count */
                 ittt     ge
                 ldrge    r0, [r1, r3]
                 strge    r0, [r2, r3]
-                bge      .L_loop0_0_ns
+                bge      .L_loop0_0
 
                 adds     r4, #12
-                b        .L_loop0_ns
-.L_loop0_done_ns:
+                b        .L_loop0
+.L_loop0_done:
 
                 ldr      r3, =__zero_table_start__
                 ldr      r4, =__zero_table_end__
 
-.L_loop2_ns:
+.L_loop2:
                 cmp      r3, r4
-                bge      .L_loop2_done_ns
+                bge      .L_loop2_done
                 ldr      r1, [r3]                /* destination address */
                 ldr      r2, [r3, #4]            /* word count */
                 lsls     r2, r2, #2              /* byte count */
                 movs     r0, 0
 
-.L_loop2_0_ns:
+.L_loop2_0:
                 subs     r2, #4                  /* decrement byte count */
                 itt      ge
                 strge    r0, [r1, r2]
-                bge      .L_loop2_0_ns
+                bge      .L_loop2_0
 
                 adds     r3, #8
-                b        .L_loop2_ns
-.L_loop2_done_ns: // Start program nadat loop2 gedaan is
-
-                bl main_ns // Als __START wel gedefined is somehow
+                b        .L_loop2
+.L_loop2_done:
+                bl      main_ns
 
                 .fnend
-                .size    Reset_Handler_ns, . - Reset_Handler_ns
+                .size    Reset_Handler, . - Reset_Handler
 /* The default macro is not used for HardFault_Handler
  * because this results in a poor debug illusion.
  */
-// Skip deze 2 ook voorlopig
-/*
                 .thumb_func
                 .type    HardFault_Handler, %function
                 .weak    HardFault_Handler
                 .fnstart
-
-/*
 HardFault_Handler:
                 b        .
                 .fnend
@@ -176,19 +271,15 @@ HardFault_Handler:
                 .weak    Default_Handler
                 .fnstart
 Default_Handler:
+// Default Handler gedrag = niks doen? Overschreven in code? 
                 b        .
                 .fnend
                 .size    Default_Handler, . - Default_Handler
-*/
-
-
-// Skip deze voorlopig nog
 
 /* Macro to define default exception/interrupt handlers.
  * Default handler are weak symbols with an endless loop.
  * They can be overwritten by real handlers.
  */
- /*
                 .macro   Set_Default_Handler  Handler_Name
                 .weak    \Handler_Name
                 .set     \Handler_Name, Default_Handler
@@ -280,5 +371,4 @@ Default_Handler:
                 Set_Default_Handler  RFECA0_IRQHandler
                 Set_Default_Handler  RFECA1_IRQHandler
 
-*/
                 .end

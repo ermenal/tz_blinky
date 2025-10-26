@@ -65,9 +65,9 @@ SECTIONS
     . = ALIGN(4);
     __copy_table_ns_start__ = .;
 
-    LONG (__etext)
-    LONG (__data_start__)
-    LONG ((__data_end__ - __data_start__) / 4)
+    LONG (__etext_ns)
+    LONG (__data_ns_start__)
+    LONG ((__data_ns_end__ - __data_ns_start__) / 4)
 
     /* Add each additional data section here */
 /*
@@ -75,7 +75,7 @@ SECTIONS
     LONG (__data2_start__)
     LONG ((__data2_end__ - __data2_start__) / 4)
 */
-    __copy_table_end__ = .;
+    __copy_table_ns_end__ = .;
   } > FLASH_S
 
   .zero.table :
@@ -88,12 +88,13 @@ SECTIONS
     LONG ((__bss2_end__ - __bss2_start__) / 4)
 */
     __zero_table_end__ = .;
-    __etext = ALIGN(4);
+    __etext_ns = ALIGN(4);
   } > FLASH_S
 
-  .data : AT (__etext)
+  .data : AT (__etext_ns)
   {
-    __data_start__ = .;
+    __data_ns_start__ = .;
+    /* Wij hebben bv geen "vtable" vgm, allemaal general shit */
     *(vtable)
     *(.data*)
     . = ALIGN (4);
@@ -124,7 +125,7 @@ SECTIONS
     KEEP(*(.jcr*))
     . = ALIGN(4);
     /* All data end */
-    __data_end__ = .;
+    __data_ns_end__ = .;
 
   } > RAM_S
 
@@ -152,12 +153,12 @@ SECTIONS
   .bss :
   {
     . = ALIGN(4);
-    __bss_start__ = .;
+    __bss_ns_start__ = .;
     *(.bss)
     *(.bss.*)
     *(COMMON)
     . = ALIGN(4);
-    __bss_end__ = .;
+    __bss_ns_end__ = .;
   } > RAM_S AT > RAM_S
 
   /*
@@ -181,12 +182,12 @@ SECTIONS
 
   .heap (COPY):
   {
-    __HeapBase = .;
+    __HeapBaseNS = .;
     __end__ = .;
     end = __end__;
     _end = __end__;
     KEEP(*(.heap*))
-    __HeapLimit = .;
+    __HeapLimitNS = .;
   } > RAM_S
   /* ARMv8-M stack sealing:
      to use ARMv8-M stack sealing uncomment '.stackseal' section and KEEP(*(.stackseal*))
@@ -213,13 +214,13 @@ SECTIONS
 
   /* Set stack top to end of RAM, and stack limit move down by
    * size of stack_dummy section */
-  __StackTop = ORIGIN(RAM_S) + LENGTH(RAM_S);
-  __StackLimit = __StackTop - SIZEOF(.stack_dummy);
-  PROVIDE(__stack = __StackTop);
+  __StackTopNS = ORIGIN(RAM_S) + LENGTH(RAM_S);
+  __StackLimitNS = __StackTopNS - SIZEOF(.stack_dummy);
+  PROVIDE(__stack = __StackTopNS);
 
   /* Check if data + heap + stack exceeds RAM limit */
-  ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")
+  ASSERT(__StackLimitNS >= __HeapLimitNS, "region RAM overflowed with stack")
 
   /* Check if FLASH usage exceeds FLASH size */
-  ASSERT( LENGTH(FLASH_S) >= (__etext + SIZEOF(.data)), "FLASH memory overflowed !")
+  ASSERT( LENGTH(FLASH_S) >= (__etext_ns + SIZEOF(.data)), "FLASH memory overflowed !")
 }
